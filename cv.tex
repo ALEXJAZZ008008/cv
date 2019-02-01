@@ -4,7 +4,7 @@
 
 \documentclass{cv} % Use the custom cv.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
@@ -21,7 +21,9 @@
 \begin{rSection}{Personal Statement}
 
 \item During my time studying for my MSc (in Advanced Computer Science) I enrolled on a module titled Image Analysis. I expected this module to focus on image recognition, it did not, this module was my introduction to Medical Imaging. After completing the module I was invited to work on my master’s dissertation in the medical imaging lab, here I worked on motion correction for medical imaging using infrared cameras. This was all the experience I needed to pursue a PhD in the field.
+
 \item In addition to my MSc in Advanced Computer Science I also have a BSc in Computer Science.
+
 \item My PhD focuses mainly on data driven respiratory motion correction for PET/CT. Data driven meaning that the motion of the patient is taken directly from the data from the PET/CT, this is in contrast to my master’s dissertation where the motion was detected using a camera. Motion correction meaning to take the motion that has been detected and attempt to correct for it in the PET/CT data. Respiratory motion is specifically a problem as breathing motion causes a lot of the organs in the abdomen of a patient, which are being imaged, to shift around and blur.
 
 \end{rSection}
@@ -42,10 +44,71 @@
 
 \begin{rSection}{Education}
 
-{\bf Indian Institute of Technology Kanpur} \hfill {\em July 2008 - Present} 
-\\ Junior Undergraduate \hfill { Overall GPA: /10}
-\\ Department of Chemical Engineering  
+{\bf University College London} \hfill {\em 2018 - Present} 
+\\ MPhil/PhD
+\\ Medical Physics
 
+\item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
+
+{\bf University of Hull} \hfill {\em 2017 - 2018} 
+\\ MSc \hfill {Distinction: 84\%}
+\\ Advanced Computer Science
+
+\item C++ Programming and design, Development Project, Image Analysis, MSc Dissertation, Real-Time Graphics, Simulation and Artificial Intelligence and Visualisation.
+
+{\bf University of Hull} \hfill {\em 2014 - 2017} 
+\\ BSc \hfill {First Class Honours: 1st year 76.7\%, 2nd year 74.4\%, 3rd year 85.2\%}
+\\ Computer Science
+
+\item Computer Systems, Professional Skills for Computer Science, Programming 2, Programming 1, Quantitative Methods for Computer Science and Software Engineering and Human Computer Interaction.
+
+\item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics and Systems Analysis, Design and Process.
+
+\item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications and Virtual Environments.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+{\bf Data-Driven Algorithms for Respiratory Motion Correction in PET/CT: Improved Quantification for Respiratory Gated PET/CT} \hfill {\em 2018 - Present} 
+
+\item PET/CT scanners combine Positron Emission Tomography with X-rays to provide functional and anatomic images of the patient. In current clinical practice in oncology, PET data are acquired for ~2min while a single (fast) CT is used for attenuation correction. Respiratory movement is usually ignored. This causes reduced resolution but also problems due to misalignment between the PET and CT data, leading to reduced certainty in lesion localisation and errors in quantification. Various solutions have been developed to take respiratory movement into account by using gating (e.g. via external monitoring or data-driven), potentially followed by image registration and averaging to reduce noise. However, if a single CT is used for attenuation correction, the misalignment problem still exists. The current recommended solution is to use CINE CT data together with CT gating at the expense of higher dose to the patient. These problems, and remaining work flow complexities, delay uptake of advanced motion management strategies in the clinic.
+
+\item The aim of this project is to combine the latest techniques on data-driven gating, image registration, motion modelling and image reconstruction to enable a work flow that is transparent to the patient and technicians while obtaining PET/CT images corrected for respiratory motion and are automatically aligned between the two modalities.
+
+{\bf Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT} \hfill {\em 2018} 
+
+\item Positron emission tomography (PET) is a common medical imaging modality used for acquiring functional images, images of the internal metabolic processes of a subject. These scans can take upwards of a few minutes to complete and during this time the subject of the scan could move for any number of reasons, including respiratory movement and musculoskeletal movement. Current standard practise is to attempt to ignore the movement of the subject, however, any movement no matter how slight degrades image resolution and introduces motion related artefacts.
+
+\item In order to attempt to correct for the movement of the subject a method to track this motion must be found. This dissertation proposes a method to correct for subject movement in PET/CT scans, the method proposed involves using a stereo depth sensing camera to track the motion of the subject. The stereo depth sensing camera tracks the motion by taking depth images of the subject, in a scene, multiple times per second. The movement of the subject is then found by calculating the difference between these depth images.
+
+\item Specifically, in order to track the change over time of the depth images, the application proposed in this dissertation will acquire data from the three dimensional stereo depth sensor of a Microsoft Kinect camera, the application will then use this to create a point cloud representation of a given scene. After the point cloud representation of the scene has been found registration will then be used to find the change in position of each point in each point cloud from point cloud to point cloud iteratively. The output of the registration processes will be used to calculate and output a translation or vector field that represents the change in the position of the objects in the scene over time.
+
+\item Currently a stand alone, cross platform framework is under development to provide a facility for image analysis, reconstruction, the construction of an image of an object from multiple projections of the object from many different angles and data processing of a multitude of data formats, this framework is called the software for tomographic image reconstruction (STIR) framework. STIR will provide these facilities for data acquired through the use of PET, computed tomography (CT), single photon emission computed tomography (SPECT) and magnetic resonance (MR) or magnetic resonance imaging (MRI) scanners.
+
+\item The development of this project will take place using and be compatible with the STIR image reconstruction toolkit version three and the sinogram acquisition viewer or STIR data viewer (SAvVy).
+
+\item The goal of this project will be the development of modules or libraries that will provide the function of motion correction and can be integrated into STIR or SAvVy. These modules or libraries will provide the motion correction by attempting to extract translations or vector fields from, the change over time of, depth images. These depth images will be acquired using a Microsoft Kinect camera. The output from the application will then hopefully be used to warp the data of the medical scanners in order to correct for observed motion, this is known as motion correction or motion compensated reconstruction.
+
+
+{\bf Capture the Campus!} \hfill {\em 2017} 
+
+\item Capture the Campus! is a GPS based mobile game influenced by the classic 80’s arcade game Qix and to a lesser extent Pokémon GO, and Ingress.
+
+\item In the game of Qix the objective is to steer a player character around the periphery of a square play area before then travelling across this play area all while avoiding multiple computer-controlled enemies.
+
+\item Once the player character has crossed the play area the play area is then redefined as the larger of the two polygons that are created by splitting the play area into two along the path travelled by the player character. A score is awarded to the player character based on the size of the polygon removed from the play area. The enemies mentioned above wander randomly around within the play area, if an enemy intersects the player character’s path the player character’s path is reset and they lose a life.
+
+\item The objective of Capture the Campus! is like that of Qix, as described above. However, rather than controlling a player character with something like a mouse and keyboard or a game controller the player character is controlled by the player’s physical movement in the real world.
+The play area is defined using latitude, longitude coordinates, and to capture parts of this play area the player must move physically from one side of it to the other.
+
+\item The game is run from a mobile device in the player’s possession and their location is tracked using GPS data from the devices GPS sensor.
+As in Qix there are computer-controlled enemies, these enemies can kill the player but rather than removing a life, points are deducted from their score.
+The game ends after a predetermined area has been captured.
 
 \end{rSection}
 
@@ -55,20 +118,75 @@
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{IIT Bombay}{May 2015 - July 2015}{Undergraduate Research}{}
-\item Employed CFD software Gerris to carry out 20 simulations and analysed different shapes during oscillation
-\item Derived Lamb’s dispersion relation for free oscillation and applied it to calculate strength of different modes
-\item Analysed simulated data to obtain velocity field and compared it with theoretical data to obtain results
-\end{rSubsection}
+\begin{rSubsection}{University College London}{2018 - Present}{Postgraduate Teaching Assistant}{}
 
+\item I currently work at University College London. At University College London I work as a Postgraduate Teaching Assistant. This role involves aiding with the teaching of certain modules within the university.
+
+\end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{IIT Kanpur}{January 2015 - April 2015}{Manufacturing Process Project - Dragon Model}{}
-\item Worked in a team of six people and came up with a model of Dragon with movable wings 
-\item Designed and fabricated a skeleton model of dragon with movable wings from scratch in lab employing processes of welding, brazing and casting
-\item Received Certificate of Appreciation among 40 projects for its artwork and detailing
+\begin{rSubsection}{Hull University Union}{2018}{GIAG Trip Leader}{}
+
+\item I worked at Hull University Union during the winter of 2018. At Hull University Union I worked as a GIAG Trip Leader. This role involved taking groups of university students on trips to events in Hull and the surrounding areas.
+
 \end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{University of Hull}{2017-2018}{Demonstrator}{}
+
+\item I worked at the University of Hull from the summer of 2017 until the summer of 2018. At the University of Hull I worked as a Demonstrator. This role involved aiding with the teaching of certain modules within the university.
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
+
+\item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017. At the University of Hull (Digital Centre) I worked as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles and the internet of things.
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{DreamThinkSpeak}{2017}{VR Assistant, One Day Maybe}{}
+
+\item I worked on the production of One Day Maybe by DreamThinkSpeak during the summer of 2017. On One Day Maybe I worked as a VR Assistant. This role involved overseeing the VR aspects of the performance to ensure a smooth running experience.
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Hull University Union}{2016 - 2018}{Service Leader}{}
+
+\item I worked at Hull University Union from the summer of 2016 until the summer of 2018. At Hull University Union I worked as a member of the Bars and Catering Team, I had also been promoted to the role of Service Leader of the Floor staff. This role involved coordinating the members of the floor staff and dealing with any issues that arise from the patrons of the university union.
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Hull University Union}{2016 - 2018}{Welcomefest Champion}{}
+
+\item I worked at Hull University Union from the summer of 2016 until the summer of 2018. At Hull University Union I worked as a Welcomefest Champion. This role involved acting as an ambassador of the university union during the first weeks of each university trimester and during university open days.
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	OTHER QUALIFICATIONS, SKILLS, HOBBIES AND INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Other Qualifications, Skills, Hobbies and Interests}
+
+\item I am a qualified jazz and classical saxophonist to a grade 5 standard, I am also a self taught  bass guitarist.
+
+\item I am a skilled brewer, I have brewed beer and wine in a multitude of styles including all of the standard English styles. I worked as the head brewers assistant at York Brewery for a short period of time.
+
+\item I enjoy electronics as a hobby. In the past, I have conducted numerous electronics projects, for instance; building a Theremin and designing and building a guitar preamplifier.
+
+\item I have an interest in woodworking and guitar luthier. I fix and modify vintage and broken guitars, for instance; changing pickguards and tuners and modifying or repairing guitar electronics. The largest woodworking or guitar luthier project I have undertaken was to build a bass guitar from scratch.
 
 \end{rSection}
 
