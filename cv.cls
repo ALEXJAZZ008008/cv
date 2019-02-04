@@ -21,10 +21,9 @@
 
 \def \addressSep {$\diamond$}
 
-% One, two or three address lines can be specified 
+% One or two address lines can be specified 
 \let \@addressone \relax
 \let \@addresstwo \relax
-\let \@addressthree \relax
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
 \def \address #1
@@ -32,11 +31,6 @@
     \@ifundefined{@addresstwo}
     {
         \def \@addresstwo {#1}
-    }
-    
-    \@ifundefined{@addressthree}
-    {
-        \def \@addressthree {#1}
     }
     
     \def \@addressone {#1}
