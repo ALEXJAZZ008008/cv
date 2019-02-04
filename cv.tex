@@ -2,15 +2,15 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{cv} % Use the custom cv.cls style
+\documentclass{cv}
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
-\name{Alexander C Whitehead} % Your name
-\address{72 Birchington Avenue, Huddersfield, HD3~3RB} % Your address
-\address{(+44)~07557~985~843 \\ alexndercwhitehead@gmail.com} % Your phone number and email
+\name{Alexander C Whitehead}
+\address{72 Birchington Avenue, Huddersfield, HD3~3RB}
+\address{(+44)~07557~985~843 \\ alexndercwhitehead@gmail.com}
 
 \begin{document}
 
@@ -76,9 +76,17 @@
 
 {\bf Data-Driven Algorithms for Respiratory Motion Correction in PET/CT: Improved Quantification for Respiratory Gated PET/CT} \hfill {\em 2018 - Present} 
 
-\item PET/CT scanners combine Positron Emission Tomography with X-rays to provide functional and anatomic images of the patient. In current clinical practice in oncology, PET data are acquired for ~2min while a single (fast) CT is used for attenuation correction. Respiratory movement is usually ignored. This causes reduced resolution but also problems due to misalignment between the PET and CT data, leading to reduced certainty in lesion localisation and errors in quantification. Various solutions have been developed to take respiratory movement into account by using gating (e.g. via external monitoring or data-driven), potentially followed by image registration and averaging to reduce noise. However, if a single CT is used for attenuation correction, the misalignment problem still exists. The current recommended solution is to use CINE CT data together with CT gating at the expense of higher dose to the patient. These problems, and remaining work flow complexities, delay uptake of advanced motion management strategies in the clinic.
+\item PET/CT is a common medical imaging modality which combines Positron Emission Tomography (PET) with an X-ray based imaging modality known as Computed Tomography (CT). PET works by detecting a radioactive tracer which is injected into the patient. This modality is used to take functional images, images of the internal metabolic processes, and anatomical images of a patient. Every year in the UK just under 150,000 PET/CT scans are performed, the majority of these scans are used in the diagnosis and treatment of cancer, also known as oncology. PET scans can take upwards of a few minutes to complete, a single fast CT scan is used to correct for the attenuation of the intensity of the radioactive tracer.
 
-\item The aim of this project is to combine the latest techniques on data-driven gating, image registration, motion modelling and image reconstruction to enable a work flow that is transparent to the patient and technicians while obtaining PET/CT images corrected for respiratory motion and are automatically aligned between the two modalities.
+\item Any movement during a PET/CT scan will lead to blurring of the final image, this occurs in a similar way to how blurring may appear during a long exposure photograph. One source of movement is respiratory motion from a patient breathing. Common clinical practice is to attempt to ignore any abnormalities in the final image or to perform a scan where the patient is instructed to hold their breath. However, many patients are not capable of holding their breath due to the illness which is causing them to have a PET/CT scan. The introduction of respiratory motion causes reduced resolution of the final image but can also cause problems aligning the PET data to the CT data, this leads to errors in the detection and location of tumours.
+
+\item Previous solutions have mainly focused on segmenting PET data into the phases of the breathing cycle, this segmentation can either occur through the use of an external device or through a data driven method. This method is then followed by image registration and averaging to align the segmented data. However, if a single CT is used for attenuation correction, the misalignment problem still exists. One way to overcome this is to use CINE CT or 4D CT data where a CT image is taken for every phase of the breathing cycle which can then be replayed like a video hence the CINE or cinema and 4D names. However, this obviously requires a higher dose to the patient. These problems delay the use of advanced motion management strategies in the clinic.
+
+\item PET data can already be gated using data-driven techniques without need for external equipment. However, further improvements to the method are needed for the upper lung. Moreover, a preliminary method to align CT images to respiratory gated PET has been developed, however, this method is likely too slow for clinical application and struggles with larger movements.
+
+\item The aim of this project is to produce PET/CT images which are corrected for respiratory motion and are automatically aligned between PET and CT data. This will be achieved through data-driven gating and image registration. The performance and computation time will be improved by incorporating motion models. Ideally this will enable a workflow that is transparent to both the patient and the clinicians. This will be achieved with minimal impact on the patient and clinical environment, without increased dose, without increasing scanning time, while still maintaining a simple workflow. The method will be evaluated on patient data with a comparison to current industry methods. This project is sponsored by General Electric.
+
+%------------------------------------------------
 
 {\bf Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT} \hfill {\em 2018} 
 
@@ -94,6 +102,7 @@
 
 \item The goal of this project will be the development of modules or libraries that will provide the function of motion correction and can be integrated into STIR or SAvVy. These modules or libraries will provide the motion correction by attempting to extract translations or vector fields from, the change over time of, depth images. These depth images will be acquired using a Microsoft Kinect camera. The output from the application will then hopefully be used to warp the data of the medical scanners in order to correct for observed motion, this is known as motion correction or motion compensated reconstruction.
 
+%------------------------------------------------
 
 {\bf Capture the Campus!} \hfill {\em 2017} 
 
