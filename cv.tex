@@ -1,80 +1,54 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass{cv}
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry}
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\linespread{0.91}
+
+\usepackage[left=1cm,top=1cm,right=1cm,bottom=1cm]{geometry}
 
 \name{Alexander C Whitehead}
+
 \address{(+44)~07557~985~843 \\ alexndercwhitehead@gmail.com}
 \address{72 Birchington Avenue, Huddersfield, HD3~3RB}
 
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-%	PERSONAL STATEMENT SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{Personal Statement}
+
+\vspace{-0.2cm}
 
 \item During my time studying for my MSc (in Advanced Computer Science at the University of Hull) I enrolled on a module titled Image Analysis. I expected this module to focus on image recognition, it did not, this module was my introduction to Medical Imaging. After completing and thoroughly enjoying this module I was invited to work on my master’s dissertation with the lecturer of the Image Analysis module at the PET preclinical centre. Here I worked on motion correction for medical imaging using a stereo depth camera (Microsoft Kinect).
 
 \item My PhD focuses mainly on data driven respiratory motion correction using motion modelling and warped attenuation maps for PET/CT. Respiratory motion is specifically a problem as breathing causes the organs in the abdomen of the patient, which are being imaged, to shift around and blur. Data driven, meaning that the motion of the patient is taken directly from the data from the PET/CT, this is in contrast to my master’s dissertation where the motion was detected using an external device. Motion correction meaning to take the motion that has been detected and attempt to correct for it in the PET/CT data. Motion modelling, meaning that the motion of the patient is estimated using a correspondence model which is fit using a surrogate signal, in this case the data driven motion spoken about previously. Warped attenuation maps, meaning that the map used to correct for the attenuation of the PET data is warped to every phase of the breathing cycle.
-
-
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
 
 \begin{rSection}{Technical Strengths}
 
-\item C++, C, DirectX, OpenGL, Arduino, C\#, .Net, ASP, Unity, Xamarin, Java, Android, Python, Matlab, Pascal, JavaScript, Git, SVN, BNF,  Flex, Bison, OpenDX, GNU/Linux, Shell Scripting, Solidworks, Soldering, 3D Printing
+\vspace{-0.2cm}
 
+\item C++, C, DirectX, OpenGL, Arduino, C\#, .Net, ASP, Unity, Xamarin, Java, Android, Python, Matlab, Pascal, JavaScript, Git, SVN, BNF,  Flex, Bison, OpenDX, GNU/Linux, Shell Scripting, Solidworks, Soldering, 3D Printing
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{Education}
-
 {\bf University College London} \hfill {\em 2018 - Present} 
 \\ MPhil/PhD
 \\ Medical Physics
-
 \item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
 
 {\bf University of Hull} \hfill {\em 2017 - 2018} 
 \\ MSc \hfill {Distinction}
 \\ Advanced Computer Science
-
 \item C++ Programming and design, Development Project, Image Analysis, MSc Dissertation, Real-Time Graphics, Simulation and Artificial Intelligence and Visualisation.
 
 {\bf University of Hull} \hfill {\em 2014 - 2017} 
 \\ BSc \hfill {First Class Honours}
 \\ Computer Science
-
-\item Computer Systems, Professional Skills for Computer Science, Programming 2, Programming 1, Quantitative Methods for Computer Science and Software Engineering and Human Computer Interaction.
+\item Computer Systems, Professional Skills for Computer Science, Programming 2, Programming 1, Quantitative Methods for Computer Science and Software Engineering and Human Computer Interaction
 
 \item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics and Systems Analysis, Design and Process.
 
 \item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications and Virtual Environments.
-
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	PROJECTS SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{Projects}
-
 {\bf Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT} \hfill {\em} 
-
 \item PET/CT is a common medical imaging modality which combines Positron Emission Tomography (PET) with an X-ray based imaging modality known as Computed Tomography (CT). PET works by detecting a radioactive tracer which is injected into the patient. This modality is used to take functional images, images of the internal metabolic processes, and anatomical images of a patient. Every year in the UK just under 150,000 PET/CT scans are performed, the majority of these scans are used in the diagnosis and treatment of cancer, also known as oncology. PET scans can take upwards of a few minutes to complete, a single fast CT scan is used to correct for the attenuation of the intensity of the radioactive tracer.
 
 \item Any movement during a PET/CT scan will lead to blurring of the final image, this occurs in a similar way to how blurring may appear during a long exposure photograph. One source of movement is respiratory motion from a patient breathing. Common clinical practice is to attempt to ignore any abnormalities in the final image or to perform a scan where the patient is instructed to hold their breath. However, many patients are not capable of holding their breath due to the illness which is causing them to have a PET/CT scan. The introduction of respiratory motion causes reduced resolution of the final image but can also cause problems aligning the PET data to the CT data, this leads to errors in the detection and location of tumours.
@@ -88,7 +62,6 @@
 %------------------------------------------------
 
 {\bf Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT} \hfill {\em} 
-
 \item Positron emission tomography (PET) is a common medical imaging modality used for acquiring functional images, images of the internal metabolic processes of a subject. These scans can take upwards of a few minutes to complete and during this time the subject of the scan could move for any number of reasons, including respiratory movement and musculoskeletal movement. Current standard practise is to attempt to ignore the movement of the subject, however, any movement no matter how slight degrades image resolution and introduces motion related artefacts.
 
 \item In order to attempt to correct for the movement of the subject a method to track this motion must be found. This dissertation proposes a method to correct for subject movement in PET/CT scans, the method proposed involves using a stereo depth sensing camera to track the motion of the subject. The stereo depth sensing camera tracks the motion by taking depth images of the subject, in a scene, multiple times per second. The movement of the subject is then found by calculating the difference between these depth images.
@@ -104,7 +77,6 @@
 %------------------------------------------------
 
 {\bf Capture the Campus!} \hfill {\em} 
-
 \item Capture the Campus! is a GPS based mobile game influenced by the classic 80’s arcade game Qix and to a lesser extent Pokémon GO, and Ingress.
 
 \item In the game of Qix the objective is to steer a player character around the periphery of a square play area before then travelling across this play area all while avoiding multiple computer-controlled enemies.
@@ -117,45 +89,23 @@ The play area is defined using latitude, longitude coordinates, and to capture p
 \item The game is run from a mobile device in the player’s possession and their location is tracked using GPS data from the devices GPS sensor.
 As in Qix there are computer-controlled enemies, these enemies can kill the player but rather than removing a life, points are deducted from their score.
 The game ends after a predetermined area has been captured.
-
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
+\begin{rSubsection}{University College London}{2019 - Present}{Exam Invigilator}{}
+\item I currently work at University College London. At University College London I work as an exam invigilator. This role involves ensuring that exams at the university run as smoothly and fairly as possible.
+\end{rSubsection}
 
 \begin{rSubsection}{University College London}{2018 - Present}{Postgraduate Teaching Assistant}{}
-
 \item I currently work at University College London. At University College London I work as a Postgraduate Teaching Assistant. This role involves aiding with the teaching of certain modules within the university.
-
 \end{rSubsection}
-
-%------------------------------------------------
 
 \begin{rSubsection}{University of Hull}{2017-2018}{Demonstrator}{}
-
 \item I worked at the University of Hull from the summer of 2017 until the summer of 2018. At the University of Hull I worked as a Demonstrator. This role involved aiding with the teaching of certain modules within the university.
-
 \end{rSubsection}
-
-%------------------------------------------------
 
 \begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
-
 \item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017. At the University of Hull (Digital Centre) I worked as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles, 3D printing and the internet of things.
-
 \end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{DreamThinkSpeak}{2017}{VR Assistant, One Day Maybe}{}
-
-\item I worked on the production of One Day Maybe by DreamThinkSpeak during the summer of 2017. At DreamThinkSpeak I worked on the production of One Day Maybe as a VR Assistant. This role involved overseeing the VR aspects of the performance to ensure a smooth running experience.
-
-\end{rSubsection}
-
 \end{rSection}
-
 \end{document}
