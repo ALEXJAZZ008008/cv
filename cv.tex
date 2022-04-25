@@ -1,111 +1,102 @@
 \documentclass{cv}
-
-\linespread{0.91}
-
 \usepackage[left=1cm,top=1cm,right=1cm,bottom=1cm]{geometry}
 
-\name{Alexander C Whitehead}
+\name{Alexander C. Whitehead}
 
-\address{(+44)~07557~985~843 \\ alexndercwhitehead@gmail.com}
-\address{72 Birchington Avenue, Huddersfield, HD3~3RB}
+\address{(+44)~07557~985~843 \\ alexandercwhitehead@gmail.com}
+\address{72 Birchington Avenue, Huddersfield, West Yorkshire, HD3~3RB, UK}
 
 \begin{document}
-\begin{rSection}{Personal Statement}
-
-\vspace{-0.2cm}
-
-\item During my time studying for my MSc (in Advanced Computer Science at the University of Hull) I enrolled on a module titled Image Analysis. I expected this module to focus on image recognition, it did not, this module was my introduction to Medical Imaging. After completing and thoroughly enjoying this module I was invited to work on my master’s dissertation with the lecturer of the Image Analysis module at the PET preclinical centre. Here I worked on motion correction for medical imaging using a stereo depth camera (Microsoft Kinect).
-
-\item My PhD focuses mainly on data driven respiratory motion correction using motion modelling and warped attenuation maps for PET/CT. Respiratory motion is specifically a problem as breathing causes the organs in the abdomen of the patient, which are being imaged, to shift around and blur. Data driven, meaning that the motion of the patient is taken directly from the data from the PET/CT, this is in contrast to my master’s dissertation where the motion was detected using an external device. Motion correction meaning to take the motion that has been detected and attempt to correct for it in the PET/CT data. Motion modelling, meaning that the motion of the patient is estimated using a correspondence model which is fit using a surrogate signal, in this case the data driven motion spoken about previously. Warped attenuation maps, meaning that the map used to correct for the attenuation of the PET data is warped to every phase of the breathing cycle.
-\end{rSection}
-
-\begin{rSection}{Technical Strengths}
-
-\vspace{-0.2cm}
-
-\item C++, C, DirectX, OpenGL, Arduino, C\#, .Net, ASP, Unity, Xamarin, Java, Android, Python, Matlab, Pascal, JavaScript, Git, SVN, BNF,  Flex, Bison, OpenDX, GNU/Linux, Shell Scripting, Solidworks, Soldering, 3D Printing
-\end{rSection}
-
-\begin{rSection}{Education}
-{\bf University College London} \hfill {\em 2018 - Present} 
-\\ MPhil/PhD
-\\ Medical Physics
-\item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
-
-{\bf University of Hull} \hfill {\em 2017 - 2018} 
-\\ MSc \hfill {Distinction}
-\\ Advanced Computer Science
-\item C++ Programming and design, Development Project, Image Analysis, MSc Dissertation, Real-Time Graphics, Simulation and Artificial Intelligence and Visualisation.
-
-{\bf University of Hull} \hfill {\em 2014 - 2017} 
-\\ BSc \hfill {First Class Honours}
-\\ Computer Science
-\item Computer Systems, Professional Skills for Computer Science, Programming 2, Programming 1, Quantitative Methods for Computer Science and Software Engineering and Human Computer Interaction
-
-\item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics and Systems Analysis, Design and Process.
-
-\item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications and Virtual Environments.
-\end{rSection}
-
-\begin{rSection}{Projects}
-{\bf Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT} \hfill {\em} 
-\item PET/CT is a common medical imaging modality which combines Positron Emission Tomography (PET) with an X-ray based imaging modality known as Computed Tomography (CT). PET works by detecting a radioactive tracer which is injected into the patient. This modality is used to take functional images, images of the internal metabolic processes, and anatomical images of a patient. Every year in the UK just under 150,000 PET/CT scans are performed, the majority of these scans are used in the diagnosis and treatment of cancer, also known as oncology. PET scans can take upwards of a few minutes to complete, a single fast CT scan is used to correct for the attenuation of the intensity of the radioactive tracer.
-
-\item Any movement during a PET/CT scan will lead to blurring of the final image, this occurs in a similar way to how blurring may appear during a long exposure photograph. One source of movement is respiratory motion from a patient breathing. Common clinical practice is to attempt to ignore any abnormalities in the final image or to perform a scan where the patient is instructed to hold their breath. However, many patients are not capable of holding their breath due to the illness which is causing them to have a PET/CT scan. The introduction of respiratory motion causes reduced resolution of the final image but can also cause problems aligning the PET data to the CT data, this leads to errors in the detection and location of tumours.
-
-\item Previous solutions have mainly focused on segmenting PET data into the phases of the breathing cycle, this segmentation can either occur through the use of an external device or through a data driven method. This method is then followed by image registration and averaging to align the segmented data. However, if a single CT is used for attenuation correction, the misalignment problem still exists. One way to overcome this is to use Cine CT or 4D CT data where a CT image is taken for every phase of the breathing cycle which can then be replayed like a video hence the Cine or cinema and 4D names. However, this obviously requires a higher dose to the patient. These problems delay the use of advanced motion management strategies in the clinic.
-
-\item PET data can already be gated using data-driven techniques without need for external equipment. However, further improvements to the method are needed for the upper lung. Moreover, a preliminary method to align CT images to respiratory gated PET has been developed, however, this method is likely too slow for clinical application and struggles with larger movements.
-
-\item The aim of this project is to produce PET images which are corrected for respiratory motion and are automatically aligned with the CT data. This will be achieved through data-driven gating and image registration. The performance and robustness to noise will be improved by incorporating motion models. Ideally this will enable a work flow that is transparent to both the patient and the clinicians. This will be achieved with minimal impact on the patient and clinical environment, without increased dose, without increasing scanning time, while still maintaining a simple work flow. The method will be evaluated on patient data with a comparison to current industry methods. This project is sponsored by General Electric.
-
-%------------------------------------------------
-
-{\bf Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT} \hfill {\em} 
-\item Positron emission tomography (PET) is a common medical imaging modality used for acquiring functional images, images of the internal metabolic processes of a subject. These scans can take upwards of a few minutes to complete and during this time the subject of the scan could move for any number of reasons, including respiratory movement and musculoskeletal movement. Current standard practise is to attempt to ignore the movement of the subject, however, any movement no matter how slight degrades image resolution and introduces motion related artefacts.
-
-\item In order to attempt to correct for the movement of the subject a method to track this motion must be found. This dissertation proposes a method to correct for subject movement in PET/CT scans, the method proposed involves using a stereo depth sensing camera to track the motion of the subject. The stereo depth sensing camera tracks the motion by taking depth images of the subject, in a scene, multiple times per second. The movement of the subject is then found by calculating the difference between these depth images.
-
-\item Specifically, in order to track the change over time of the depth images, the application proposed in this dissertation will acquire data from the three dimensional stereo depth sensor of a Microsoft Kinect camera, the application will then use this to create a point cloud representation of a given scene. After the point cloud representation of the scene has been found registration will then be used to find the change in position of each point in each point cloud from point cloud to point cloud iteratively. The output of the registration processes will be used to calculate and output a translation or vector field that represents the change in the position of the objects in the scene over time.
-
-\item Currently a stand alone, cross platform framework is under development to provide a facility for image analysis, reconstruction, the construction of an image of an object from multiple projections of the object from many different angles and data processing of a multitude of data formats, this framework is called the software for tomographic image reconstruction (STIR) framework. STIR will provide these facilities for data acquired through the use of PET, computed tomography (CT), single photon emission computed tomography (SPECT) and magnetic resonance (MR) or magnetic resonance imaging (MRI) scanners.
-
-\item The development of this project will take place using and be compatible with the STIR image reconstruction toolkit version three and the sinogram acquisition viewer or STIR data viewer (SAvVy).
-
-\item The goal of this project will be the development of modules or libraries that will provide the function of motion correction and can be integrated into STIR or SAvVy. These modules or libraries will provide the motion correction by attempting to extract translations or vector fields from, the change over time of, depth images. These depth images will be acquired using a Microsoft Kinect camera. The output from the application will then hopefully be used to warp the data of the medical scanners in order to correct for observed motion, this is known as motion correction or motion compensated reconstruction.
-
-%------------------------------------------------
-
-{\bf Capture the Campus!} \hfill {\em} 
-\item Capture the Campus! is a GPS based mobile game influenced by the classic 80’s arcade game Qix and to a lesser extent Pokémon GO, and Ingress.
-
-\item In the game of Qix the objective is to steer a player character around the periphery of a square play area before then travelling across this play area all while avoiding multiple computer-controlled enemies.
-
-\item Once the player character has crossed the play area the play area is then redefined as the larger of the two polygons that are created by splitting the play area into two along the path travelled by the player character. A score is awarded to the player character based on the size of the polygon removed from the play area. The enemies mentioned above wander randomly around within the play area, if an enemy intersects the player character’s path the player character’s path is reset and they lose a life.
-
-\item The objective of Capture the Campus! is like that of Qix, as described above. However, rather than controlling a player character with something like a mouse and keyboard or a game controller the player character is controlled by the player’s physical movement in the real world.
-The play area is defined using latitude, longitude coordinates, and to capture parts of this play area the player must move physically from one side of it to the other.
-
-\item The game is run from a mobile device in the player’s possession and their location is tracked using GPS data from the devices GPS sensor.
-As in Qix there are computer-controlled enemies, these enemies can kill the player but rather than removing a life, points are deducted from their score.
-The game ends after a predetermined area has been captured.
-\end{rSection}
-
-\begin{rSection}{Experience}
-\begin{rSubsection}{University College London}{2019 - Present}{Exam Invigilator}{}
-\item I currently work at University College London. At University College London I work as an exam invigilator. This role involves ensuring that exams at the university run as smoothly and fairly as possible.
-\end{rSubsection}
-
-\begin{rSubsection}{University College London}{2018 - Present}{Postgraduate Teaching Assistant}{}
-\item I currently work at University College London. At University College London I work as a Postgraduate Teaching Assistant. This role involves aiding with the teaching of certain modules within the university.
-\end{rSubsection}
-
-\begin{rSubsection}{University of Hull}{2017-2018}{Demonstrator}{}
-\item I worked at the University of Hull from the summer of 2017 until the summer of 2018. At the University of Hull I worked as a Demonstrator. This role involved aiding with the teaching of certain modules within the university.
-\end{rSubsection}
-
-\begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
-\item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017. At the University of Hull (Digital Centre) I worked as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles, 3D printing and the internet of things.
-\end{rSubsection}
-\end{rSection}
+    \begin{rSection}{Personal Statement}
+        I am currently a PhD student at University College London in medical physics. My PhD focuses, in particular, on respiratory motion correction (with the incorporation of motion models) for PET. During my time as a PhD student I have also had an interest in surrogate signal extraction (specifically for dynamic PET) which lead to an exploration of machine learning/neural networks in general. I've applied machine learning to the fields of denoising, reconstruction and more recently arterial input function estimation.
+        
+        While studying for my PhD I undertook roles at the university teaching electronics, programming and communication. I specifically lead lectures for groups of approximately $200$ students, teaching the fundamentals of programming.
+        
+        Previously, I had studied at the University of Hull for an MSc and BSc in computer science. Here I had a particular interest in computer vision, compiler design and embedded programming. Larger projects I undertook included, a motion correction method for PET, which used a Microsoft Kinect camera to track and correct the motion of the patient, as well as an online mobile based game, which saw players physically running around cities cutting each other's paths off, a la Tron.
+        
+        While studying for my MSc and BSc I undertook roles at the university which saw me performing research to produce a cave scanning device and an autonomous remote controlled car. The cave scanning device consisted of a 3D printed custom mounted LiDAR atop a drone, which could fly into a cave and the LiDAR would scan. Furthermore I also taught classes on embedded and distributed programming.
+    \end{rSection}
+    
+    \begin{rSection}{Technical Strengths}
+        \item Medical Physics, Medical Imaging, Image Registration, Image Analysis, PET/CT, Signal Processing
+        \item Data Science, Machine Learning, Deep Learning, Artificial Intelligence, Data Visualisation, Analytical Skills
+        \item Computer Graphics, Computer Vision, Virtual Realty
+        \item C++, C, C\#, Python, Matlab, Java, JavaScript, Pascal, LaTeX, Shell Scripting, GNU/Linux, Git, SVN
+        \item OpenGL, DirectX, Android, Arduino, Xamarin, Raspberry Pi, .NET Framework, Unity, Qt, BNF, EBNF, Flex, SolidWorks, 3D Printing, Soldering 
+    \end{rSection}
+    
+    \begin{rSection}{Education}
+        {\bf University College London} \hfill {\em 2018 - Present} 
+        \\ PhD Medical Physics
+        
+        \item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
+        
+        \item Project: Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT. This project was multifaceted, initially it began with the development of a respiratory motion correction method for PET/CT. This method was invariant of the position (and hence of the introduced bias) of a misaligned attenuation map. This was achieved through the use of an iterative method, which aligned PET data and moved its reference position to that of the attenuation map. To aid in this, motion models were incorporated, which can be considered as a temporal/gate regulariser. However, the project evolved to include methods to extract respiratory signals from dynamic PET data (for the use of gating and motion model estimation) as well as denoising and reconstruction techniques which use neural networks.
+        
+        {\bf University of Hull} \hfill {\em 2017 - 2018} 
+        \\ MSc Advanced Computer Science \hfill {Distinction}
+        
+        \item C++ Programming and design, Image Analysis, Real-Time Graphics, Simulation and Artificial Intelligence and Visualisation.
+        
+        \item Project: Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT. The goal of this project was the development of a library that could provide motion correction for PET using depth sensing cameras. Deformations were determined by registering depth images (point clouds) before spatially and temporally aligning them with the PET acquisition. These deformations could then be used to correct any motion present.
+        
+        {\bf University of Hull} \hfill {\em 2014 - 2017} 
+        \\ BSc Computer Science \hfill {First Class Honours}
+        
+        \item Computer Systems, Professional Skills for Computer Science, Programming, Quantitative Methods for Computer Science and Software Engineering and Human Computer Interaction
+        
+        \item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics and Systems Analysis, Design and Process.
+        
+        \item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications and Virtual Environments.
+        
+        \item Project: Capture the Campus!, this is a GPS based mobile game. The objective is to steer yourself around the periphery of a play area before then travelling across the play area all while avoiding multiple computer-controlled enemies. Once the player has crossed the play area it is then redefined as the larger of the two polygons created by splitting the area in two along the path travelled by the player. A score is awarded to the player based on the size of the polygon removed from the play area. If an enemy intersects the player’s path their path is reset and they lose some score. A local multiplayer session can be instantiated on one phone and joined by others running the application.
+    \end{rSection}
+    
+    \begin{rSection}{Experience}
+        \begin{rSubsection}{University College London}{2018 - Present}{Senior Postgraduate Teaching Assistant}{}
+            \item I currently work at University College London. At University College London I work as a senior postgraduate teaching assistant. This role involves the teaching of and other assistance with the running of multiple modules across many academic years. For instance, this role included the lecturing of over 200 students in the fundamentals of programming.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{University of Hull}{2017-2018}{Demonstrator}{}
+            \item I worked at the University of Hull from the summer of 2017 until the summer of 2018. At the University of Hull I worked as a Demonstrator. This role involved aiding with the teaching of certain modules within the university. For instance, this role included leading embedded programming labs.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
+            \item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017. At the University of Hull (Digital Centre) I worked as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles, 3D printing and the internet of things. For instance, this role included the development of a drone mounted scanning device as well as a miniature autonomous vehicle intended for racing.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{DREAMTHINKSPEAK}{2017}{VR Assistant}{}
+            \item I worked at DREAMTHINKSPEAK on a temporary basis during the summer of 2017. At DREAMTHINKSPEAK I worked as a Research Intern. This role involved the development and deployment of a virtual reality art exhibit based on Korean apartments for the city of culture celebration.
+        \end{rSubsection}
+    \end{rSection}
+    
+    \begin{rSection}{Publications}
+        \begin{rSubsection}{Detection Efficiency Modelling and Joint Activity and Attenuation Reconstruction in non-TOF 3D PET from Multiple-Energy Window Data}{2021}{IEEE Transactions on Radiation and Plasma Medical Sciences}{}
+            \item Brusaferri, L., Emond, E. C., Bousse, A., Twyman, R., {\bf Whitehead, A. C.}, Atkinson, D., Ourselin, S., Hutton, B. F., Arridge, S. \& Thielemans, K.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{Comparison of Motion Correction Methods Incorporating Motion Modelling for PET/CT Using a Single Breath Hold Attenuation Map}{2021}{IEEE NSS-MIC}{}
+            \item {\bf Whitehead, A. C.}, Biguri, A., Su, K.-H., Wollenweber, S. D., Stearns, C. W., Hutton, B. F., McClelland, J. R. \& Thielemans, K.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{Systematic evaluation of the impact of involuntary motion in whole body dynamic PET}{2021}{IEEE NSS-MIC}{}
+            \item Biguri, A., Kotasidis, F., {\bf Whitehead, A. C.}, Burger, I., Hutton, B. F., \& Thielemans, K.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{Respiratory Motion Correction With a Single Attenuation Map Using NAC Derived Deformation Fields}{2020}{IEEE NSS-MIC}{}
+            \item {\bf Whitehead, A. C.}, Biguri, A., Efthimiou, N., Su, K.-H., Wollenweber, S. D., Stearns, C. W., Hutton, B. F., McClelland, J. R. \& Thielemans, K.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{Impact of Time-of-Flight on Respiratory Motion Modelling using Non-Attenuation-Corrected PET}{2019}{IEEE NSS-MIC}{}
+            \item {\bf Whitehead, A. C.}, Emond, E. C., Efthimiou, N., Akintonde, A., Wollenweber, S., Stearns, C. W., Hutton, B. F., McClelland, J. R. \& Thielemans, K.
+        \end{rSubsection}
+        
+        \begin{rSubsection}{ Preliminary investigation of the impact of Axial Ring Splitting on Image Quality for the Cost Reduction of Total-Body PET}{2019}{IEEE NSS-MIC}{}
+            \item Efthimiou, N., {\bf Whitehead, A. C.}, Stockhoff, M., Thyssen, C., Archibald, S. J. \& Vandenberghe, S
+        \end{rSubsection}
+    \end{rSection}
+    
+    \begin{rSection}{References}
+        Available upon request.
+    \end{rSection}
 \end{document}
