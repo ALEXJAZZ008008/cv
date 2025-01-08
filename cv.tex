@@ -1,7 +1,7 @@
 \documentclass{cv}
 \usepackage[left=1cm,top=1cm,right=1cm,bottom=1cm]{geometry}
 
-\linespread{1.09}
+\linespread{1.1}
 
 \name{Alexander~C.~Whitehead}
 
@@ -10,52 +10,51 @@
 
 \begin{document}
     \begin{rSection}{Experience}
-        \begin{rSubsection}{University College London}{2022 - 2024}{Research Fellow}{}
+        \item \begin{rSubsection}{University College London}{2022 - 2024}{Research Fellow}{}
             \item I worked at University College London from the winter of 2022 until the winter of 2024 as a research fellow. Here I was involved in multiple projects linked to OSIC (Open Source Imaging Consortium). One project was to develop a method (using neural networks) to predict how long a patient, suffering from IPF, might survive using a recent CT. I also developed an extension to this method which extracted maps of the patients lungs that highlighted regions causing the survival chance to decrease (similar to Grad-CAM but superior for our application). Furthermore, I was involved in a project to generate CTs of patients at later time points (using methods like diffusion) where their disease may have progressed. This final project was useful for disease management and planning.
         \end{rSubsection}
         
-        \begin{rSubsection}{University College London}{2018 - 2024}{Senior Postgraduate Teaching Assistant}{}
+        \item \begin{rSubsection}{University College London}{2018 - 2024}{Senior Postgraduate Teaching Assistant}{}
             \item I worked at University College London from the autumn of 2018 until the winter of 2024 as a senior postgraduate teaching assistant. Here I was involved in the teaching and examination of and other assistance with the running of multiple modules across many academic years. One aspect of this role was my lecturing of over 200 students in the fundamentals of programming. I also taught smaller workshops on mathematics as well as aided in electrical engineering labs.
         \end{rSubsection}
         
-        \begin{rSubsection}{University of Hull}{2017-2018}{Demonstrator}{}
+        \item \begin{rSubsection}{University of Hull}{2017 - 2018}{Demonstrator}{}
             \item I worked at the University of Hull from the summer of 2017 until the summer of 2018 as a Demonstrator. This role involved aiding with the teaching of certain modules within the university. For instance, this role included leading embedded programming labs.
         \end{rSubsection}
         
-        \begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
+        \item \begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
             \item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017 as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles, 3D printing, and the internet of things. For instance, this role included the development of a drone mounted scanning device as well as a miniature autonomous vehicle intended for racing.
         \end{rSubsection}
         
-        \begin{rSubsection}{DREAMTHINKSPEAK}{2017}{VR Assistant}{}
+        \item \begin{rSubsection}{DREAMTHINKSPEAK}{2017}{VR Assistant}{}
             \item I worked at DREAMTHINKSPEAK on a temporary basis during the summer of 2017 as a VR Assistant. This role involved the development and deployment of a virtual reality art exhibit based on Korean apartments for the city of culture celebration.
         \end{rSubsection}
     \end{rSection}
+
+    \newpage
     
     \begin{rSection}{Education}
-        {\bf University College London} \hfill {\em 2018 - Present} 
-        \\ PhD Medical Imaging Physics and Medical Image Computing
+        \item \begin{rSubsection}{University College London}{2018 - Present}{PhD Medical Imaging Physics and Medical Image Computing}{}            
+            \item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
+            
+            \item Project: Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT. This project was multifaceted, initially it began with the development of a respiratory motion correction method for PET/CT. This method was invariant of the position (and hence of the introduced bias) of a misaligned attenuation map. This was achieved through the use of an iterative method, which aligned PET data and moved its reference position to that of the attenuation map. To aid in this, motion models were incorporated, which can be considered as a temporal/gate regulariser. However, the project evolved to include methods to extract respiratory signals from dynamic PET data (for the use of gating and motion model estimation) as well as denoising and reconstruction techniques which use neural networks.
+        \end{rSubsection}
         
-        \item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
+        \item \begin{rSubsection}{\bf University of Hull}{2017 - 2018}{MSc Advanced Computer Science}{Distinction}
+            \item C++ Programming and Design, Image Analysis, Real-Time Graphics, Simulation and Artificial Intelligence, and Visualisation.
+            
+            \item Project: Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT. The goal of this project was the development of a library that could provide motion correction for PET using depth sensing cameras. Deformations were determined by registering depth images (point clouds) before spatially and temporally aligning them with the PET acquisition. These deformations could then be used to correct any motion present.
+        \end{rSubsection}
         
-        \item Project: Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT. This project was multifaceted, initially it began with the development of a respiratory motion correction method for PET/CT. This method was invariant of the position (and hence of the introduced bias) of a misaligned attenuation map. This was achieved through the use of an iterative method, which aligned PET data and moved its reference position to that of the attenuation map. To aid in this, motion models were incorporated, which can be considered as a temporal/gate regulariser. However, the project evolved to include methods to extract respiratory signals from dynamic PET data (for the use of gating and motion model estimation) as well as denoising and reconstruction techniques which use neural networks.
-        
-        {\bf University of Hull} \hfill {\em 2017 - 2018} 
-        \\ MSc Advanced Computer Science \hfill {Distinction}
-        
-        \item C++ Programming and Design, Image Analysis, Real-Time Graphics, Simulation and Artificial Intelligence, and Visualisation.
-        
-        \item Project: Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT. The goal of this project was the development of a library that could provide motion correction for PET using depth sensing cameras. Deformations were determined by registering depth images (point clouds) before spatially and temporally aligning them with the PET acquisition. These deformations could then be used to correct any motion present.
-        
-        {\bf University of Hull} \hfill {\em 2014 - 2017} 
-        \\ BSc Computer Science \hfill {First Class Honours}
-        
-        \item Computer Systems, Professional Skills for Computer Science, Programming, Quantitative Methods for Computer Science, and Software Engineering and Human Computer Interaction
-        
-        \item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics, and Systems Analysis, Design and Process.
-        
-        \item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications, and Virtual Environments.
-        
-        \item Project: Capture the Campus!, this is a GPS based, networked multiplayer, mobile game. The game is similar to the 80's arcade game Qix. However, here the player is moved by physically running across a map in real life, tracked by the mobile device and GPS. A local multiplayer session can be instantiated on one phone and joined by others running the application.
+        \item \begin{rSubsection}{\bf University of Hull}{\em 2014 - 2017}{BSc Computer Science}{First Class Honours}
+            \item Computer Systems, Professional Skills for Computer Science, Programming, Quantitative Methods for Computer Science, and Software Engineering and Human Computer Interaction
+            
+            \item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics, and Systems Analysis, Design and Process.
+            
+            \item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications, and Virtual Environments.
+            
+            \item Project: Capture the Campus!, this is a GPS based, networked multiplayer, mobile game. The game is similar to the 80's arcade game Qix. However, here the player is moved by physically running across a map in real life, tracked by the mobile device and GPS. A local multiplayer session can be instantiated on one phone and joined by others running the application.
+        \end{rSubsection}
     \end{rSection}
 
     \begin{rSection}{Technical Strengths}
@@ -65,112 +64,124 @@
         \item C++, C, C\#, Python, Matlab, Java, JavaScript, Pascal, LaTeX, Shell Scripting
         \item GNU/Linux, Git, SVN, Tensorflow, PyTorch, scikit-learn, Numpy, OpenGL, DirectX, Android, Arduino, Raspberry Pi, .NET Framework, Unity, Qt, BNF, EBNF, Flex, SolidWorks, 3D Printing, Electronics, Soldering 
     \end{rSection}
-
+    
     \begin{rSection}{Languages}
         \item English (native)
         \item German (A1)
+        \\
     \end{rSection}
 
-    % \begin{rSection}{References}
-    %     Available upon request.
-    % \end{rSection}
+    \begin{rSection}{References}
+        \item Available upon request.
+        \\
+    \end{rSection}
+    
+    \begin{rSection}{}
+        \item Kind regards,
+        \\
+        \\
+        \\
+        \\
+        \\
+        \item Alexander C. Whitehead
+    \end{rSection}
 
     \newpage
 
     \begin{rSection}{Personal Statement}
-        I am currently a research fellow at University College London. My post doctoral position was in a different lab from my PhD and as such concentrated far more on principled machine learning (neural network) research. I was funded by OSIC and as such had access to their large database of IPF CT scans (and their relevant clinical data). As group our objective was to determine novel biomarkers from this data, I specifically worked on survival analysis methods. We developed CenTime which is a novel censoring technique and improvement over both Cox (a very traditional survival analysis method) and DeepHit. I extended CenTime to produce maps of what in the CT is causing the greatest affect on the mortality of the patient. I also developed generative methods which could produce CTs of patients where their mortality is higher or lower. During my time in this position I was expected to present my work regularly at OSIC general meetings for experts in the medical imaging field.
+        \item I have most recently worked as a research fellow at University College London. My post doctoral position was in a different lab from my PhD and as such concentrated far more on principled machine learning (neural network) research. I was funded by OSIC and as such had access to their large database of IPF CT scans (and their relevant clinical data). As a group our objective was to determine novel biomarkers from this data, I specifically worked on survival analysis methods. We developed CenTime which is a novel censoring technique and improvement over both Cox (a very traditional survival analysis method) and DeepHit. I extended CenTime to produce maps of what in the CT is causing the greatest affect on the mortality of the patient. I also developed generative methods which could produce CTs of patients where their mortality is higher or lower. During my time in this position I was expected to present my work regularly at OSIC general meetings for experts in the medical imaging field.
         
-        My PhD focuses, in particular, on respiratory motion correction (with the incorporation of motion models) for PET/CT. During my time as a PhD student I have also had an interest in surrogate signal extraction (specifically for dynamic PET) which led to an exploration of machine learning/neural networks in general. I've applied machine learning to the fields of denoising, reconstruction and more recently arterial input function estimation. My PhD office was in the university hospital and involved a great deal of collaboration with the clinical staff. I presented multiple times at conferences during my Phd, both as a poster presentation but also as an oral presentation. I was quite enthusiastic to submit to conferences and as such I often presented two or three pieces of work at each conference.
+        \item My PhD focuses, in particular, on respiratory motion correction (with the incorporation of motion models) for PET/CT. During my time as a PhD student I have also had an interest in surrogate signal extraction (specifically for dynamic PET) which led to an exploration of machine learning/neural networks in general. I've applied machine learning to the fields of denoising, reconstruction and more recently arterial input function estimation. My PhD office was in the university hospital and involved a great deal of collaboration with the clinical staff. I presented multiple times at conferences during my Phd, both as a poster presentation but also as an oral presentation. I was quite enthusiastic to submit to conferences and as such I often presented two or three pieces of work at each conference.
         
-        While studying for my PhD I undertook roles at the university teaching electronics, programming and communication. I specifically led lectures for groups of approximately 200 students, teaching the fundamentals of programming. Additionally, I have been the primary supervisor of one MSc dissertation and secondary supervisor of a further three. My primary supervision was on a project to apply machine learning to the extraction of respiratory signals from dynamic PET. My secondary supervision were on projects to denoise total body PET data using neural networks and 3D printed phantoms.
+        \item While studying for my PhD I undertook roles at the university teaching electronics, programming and communication. I specifically led lectures for groups of approximately 200 students, teaching the fundamentals of programming. Additionally, I have been the primary supervisor of one MSc dissertation and secondary supervisor of a further three. My primary supervision was on a project to apply machine learning to the extraction of respiratory signals from dynamic PET. My secondary supervision were on projects to denoise total body PET data using neural networks and 3D printed phantoms.
         
-        Previously, I had studied at the University of Hull for an MSc and BSc in computer science. Here I had a particular interest in computer vision, compiler design and embedded programming. Larger projects I undertook included: A motion correction method for PET, which used a Microsoft Kinect camera to track and correct the motion of the patient in a medical scanner. As well as an online, multiplayer, mobile based game which saw players physically running around cities attempting to cut each other's path off, a la Tron.
+        \item Previously, I had studied at the University of Hull for an MSc and BSc in computer science. Here I had a particular interest in computer vision, compiler design and embedded programming. Larger projects I undertook included: A motion correction method for PET, which used a Microsoft Kinect camera to track and correct the motion of the patient in a medical scanner. As well as an online, multiplayer, mobile based game which saw players physically running around cities attempting to cut each other's path off, a la Tron.
         
-        While studying for my MSc and BSc I undertook roles at the university which saw me performing research to produce a cave scanning device and an autonomous remote controlled race car. The cave scanning device consisted of a 3D printed custom mounted LiDAR atop a drone, which could fly into a cave and the LiDAR would scan. Furthermore I also taught classes on embedded and distributed programming.
+        \item While studying for my MSc and BSc I undertook roles at the university which saw me performing research to produce a cave scanning device and an autonomous remote controlled race car. The cave scanning device consisted of a 3D printed custom mounted LiDAR atop a drone, which could fly into a cave and the LiDAR would scan. Furthermore I also taught classes on embedded and distributed programming.
         
-        Other than for academic education and experience, I've also enjoyed positions in the past as a bouncer in the University of Hull's nightclub and as a helpful face moving first year students into their accommodation (helping them around the university in general). I was the social secretary of the University of Hull Computer Science Society and also an honorary member of the University of York's Real Ale Society (where I set many unbeaten records). Before Covid, I also ran a cake club in the office where I was working on my PhD. Time permitting, I enjoy partaking in music (both attending and performing, I play the saxophone and the bass guitar - previously, I was involved in an outreach program teaching music in primary schools), analogue/digital photography (and film development), 3D printing, beer brewing (I worked at York Brewery for a short time), and fish keeping.
+        \item Other than for academic education and experience, I've also enjoyed positions in the past as a bouncer in the University of Hull's nightclub and as a helpful face moving first year students into their accommodation (helping them around the university in general). I was the social secretary of the University of Hull Computer Science Society and also an honorary member of the University of York's Real Ale Society (where I set many unbeaten records). Before Covid, I also ran a cake club in the office where I was working on my PhD. Time permitting, I enjoy partaking in music (both attending and performing, I play the saxophone and the bass guitar - previously, I was involved in an outreach program teaching music in primary schools), analogue/digital photography (and film development), 3D printing, beer brewing (I worked at York Brewery for a short time), and fish keeping.
     \end{rSection}
 
     \newpage
     
     \begin{rSection}{Publications}
-        \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA: An Ensemble Method}{2024}{Physics in Medicine and Biology}{}
-            \item {\bf Whitehead~A.C.}, Su~K.-H., Emond~E.C., Biguri~A., Machado~M., Porter~J.C., Garthwaite~H., Wollenweber~S.D., McClelland~J.R. and Thielemans~K.
+        \item \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA: An Ensemble Method}{2024}{Physics in Medicine and Biology}{}
+            \item {\bf Whitehead~A.C.}, Su~K.-H., Emond~E.C., Biguri~A., Machado~M., Porter~J.C., Garthwaite~H., Wollenweber~S.D., McClelland~J.R. and Thielemans~K. \\
 
-            {\bf Selected as Editor’s Choice article of the month!}
+            \item {\bf Selected as Editor’s Choice article of the month!} \\
         \end{rSubsection}
         
-        \begin{rSubsection}{CenTime: Event-conditional modelling of censoring in survival analysis}{2024}{Medical Image Analysis}{}
+        \item \begin{rSubsection}{CenTime: Event-conditional modelling of censoring in survival analysis}{2024}{Medical Image Analysis}{}
             \item Shahin~A.H, Zhao~A., {\bf Whitehead~A.C.}, Alexander~D.C., Jacob~J. and Barber D.
         \end{rSubsection}
 
-        \begin{rSubsection}{Physically informed deep neural networks for metabolite-corrected plasma input function estimation in dynamic PET imaging}{2024}{Computer Methods and Programs in Biomedicine}{}
+        \item \begin{rSubsection}{Physically informed deep neural networks for metabolite-corrected plasma input function estimation in dynamic PET imaging}{2024}{Computer Methods and Programs in Biomedicine}{}
             \item Ferrante~M., Inglese~M., Brusaferri~L., {\bf Whitehead~A.C.}, Maccioni~L., Turkheimer~F.E., Nettis~M.A., Mondelli~V., Howes~O., Loggia~M.L., Veronese~M., Toschi~N.
         \end{rSubsection}
 
-        \begin{rSubsection}{A Bayesian Neural Network-Based Method For The Extraction Of A Metabolite Corrected Arterial Input Function From Dynamic [$^{11}$C]PBR28 PET}{2023}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{A Bayesian Neural Network-Based Method For The Extraction Of A Metabolite Corrected Arterial Input Function From Dynamic [$^{11}$C]PBR28 PET}{2023}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Brusaferri~L., Maccioni~L., Ferrante~M., Inglese~M., Alshelh~Z., Veronese~M., Toschi~N., Gilman~J., Thielemans~K. and Loggia~M.L.
         \end{rSubsection}
 
-        \begin{rSubsection}{Neural Network Based Methods for the Survival Analysis of Idiopathic Pulmonary Fibrosis Patients from a Baseline CT Acquisition}{2023}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Neural Network Based Methods for the Survival Analysis of Idiopathic Pulmonary Fibrosis Patients from a Baseline CT Acquisition}{2023}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Shahin~A.H., Zhao~A., Alexander~D.C., Jacob~J. and Barber~D.
         \end{rSubsection}
         
-        \begin{rSubsection}{PET/CT Motion Correction Exploiting Motion Models Fit on Coarsely Gated Data Applied to Finely Gated Data}{2022}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{PET/CT Motion Correction Exploiting Motion Models Fit on Coarsely Gated Data Applied to Finely Gated Data}{2022}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Su~K.-H., Wollenweber~S.D., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA}{2022}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA}{2022}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Su~K.-H., Emond~E.C., Biguri~A., Machado~M., Porter~J.C., Garthwaite~H., Wollenweber~S.D., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Pseudo-Bayesian DIP Denoising as a Preprocessing Step for Kinetic Modelling in Dynamic \newline PET}{2022}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Pseudo-Bayesian DIP Denoising as a Preprocessing Step for Kinetic Modelling in Dynamic \newline PET}{2022}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Erlandsson~K., Biguri~A., Wollenweber~S.D., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Physically Informed Neural Network for Non-Invasive Arterial Input Function Estimation In Dynamic PET Imaging}{2022}{MIDL}{}
+        \item \begin{rSubsection}{Physically Informed Neural Network for Non-Invasive Arterial Input Function Estimation In Dynamic PET Imaging}{2022}{MIDL}{}
             \item Ferrante~M., Inglese~M., Brusaferri~L., {\bf Whitehead~A.C.}, Loggia~M. and Toschi~N.
         \end{rSubsection}
         
-        \begin{rSubsection}{Detection Efficiency Modelling and Joint Activity and Attenuation Reconstruction in non-TOF 3D PET from Multiple-Energy Window Data}{2021}{IEEE Transactions on Radiation and Plasma Medical Sciences}{}
+        \item \begin{rSubsection}{Detection Efficiency Modelling and Joint Activity and Attenuation Reconstruction in non-TOF 3D PET from Multiple-Energy Window Data}{2021}{IEEE Transactions on Radiation and Plasma Medical Sciences}{}
             \item Brusaferri~L., Emond~E.C., Bousse~A., Twyman~R., {\bf Whitehead~A.C.}, Atkinson~D., Ourselin~S., Hutton~B.F., Arridge~S. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Comparison of Motion Correction Methods Incorporating Motion Modelling for PET/CT Using a Single Breath Hold Attenuation Map}{2021}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Comparison of Motion Correction Methods Incorporating Motion Modelling for PET/CT Using a Single Breath Hold Attenuation Map}{2021}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Biguri~A., Su~K.-H., Wollenweber~S.D., Stearns~C.W., Hutton~B.F., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Systematic evaluation of the impact of involuntary motion in whole body dynamic PET}{2021}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Systematic evaluation of the impact of involuntary motion in whole body dynamic PET}{2021}{IEEE NSS MIC RTSD}{}
             \item Biguri~A., Kotasidis~F., {\bf Whitehead~A.C.}, Burger~I., Hutton~B.F., and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Respiratory Motion Correction With a Single Attenuation Map Using NAC Derived Deformation Fields}{2020}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Respiratory Motion Correction With a Single Attenuation Map Using NAC Derived Deformation Fields}{2020}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Biguri~A., Efthimiou~N., Su~K.-H., Wollenweber~S.D., Stearns~C.W., Hutton~B.F., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Impact of Time-of-Flight on Respiratory Motion Modelling using Non-Attenuation-Corrected \newline PET}{2019}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Impact of Time-of-Flight on Respiratory Motion Modelling using Non-Attenuation-Corrected \newline PET}{2019}{IEEE NSS MIC RTSD}{}
             \item {\bf Whitehead~A.C.}, Emond~E.C., Efthimiou~N., Akintonde~A., Wollenweber~S., Stearns~C.W., Hutton~B.F., McClelland~J.R. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{Preliminary investigation of the impact of Axial Ring Splitting on Image Quality for the Cost Reduction of Total-Body PET}{2019}{IEEE NSS MIC RTSD}{}
+        \item \begin{rSubsection}{Preliminary investigation of the impact of Axial Ring Splitting on Image Quality for the Cost Reduction of Total-Body PET}{2019}{IEEE NSS MIC RTSD}{}
             \item Efthimiou~N., {\bf Whitehead~A.C.}, Stockhoff~M., Thyssen~C., Archibald~S.J. and Vandenberghe~S.
         \end{rSubsection}
     \end{rSection}
     
     \begin{rSection}{Code}
-        \begin{rSubsection}{STIR Software for Tomographic Image Reconstruction}{2024}{Zenodo}{}
+        \item \begin{rSubsection}{STIR Software for Tomographic Image Reconstruction}{2024}{Zenodo}{}
             \item Efthimiou~N., Mustafovic~S., Brown~R., Twyman Skelly~R., Deidda~D., Tsoumpas~C., Falcon~C., Jehl~M., Strugari~M., Khateri~P., Beisel~T., Wadhwa~P., Borgeaud~T., Emond~E., Jacobson~M., Gillman~A., Zverovich~A., Fuster Marti~B., Labbe~C., Biguri~A., Fischer~J., Roethlisberger~M., Bertolli~O., Brusaferri~L., Pasca~E., Thomas~B.A, Aguiar~P., Niknejad~T., Sadki~M., Schmidtlein~C.R., Kerrouche~N., Dikaios~N., Fardell~G., Ehrhardt~M., Valente~P., Ovtchinnikov~E., Schramm~G., Völgyes~D., Dinelle~K., Belluzzo~D., Jurjew~N., Ching~D., Hague~D., Tunnicliffe~H., Chen~G., Porter~S.D., Mikhaylova~E., Dao~V.A., da Costa-Luis~C.O., {\bf Whitehead~A.C.}, Rashidnasab~A., Gillen~R., Vavrek~J., Tsai~Y.-J., Kohr~H., tokkot, El Katib~M. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{SIRF Synergistic Image Reconstruction Framework}{2023}{Zenodo}{}
+        \item \begin{rSubsection}{SIRF Synergistic Image Reconstruction Framework}{2023}{Zenodo}{}
             \item Ovtchinnikov~E.,Brown~R., Mayer~J., Pasca~E., da Costa-Luis~C.O., Atkinson~D., Kolbitsch~C., Efthimiou~N., Strugari~M., Gillman~A., Porter~S.D., Biguri~A., Deidda~D., {\bf Whitehead~A.C.}, Papoutsellis~E., Fardell~G., Thomas~B.A., Leek~F., Ehrhardt~M. and Thielemans~K.
         \end{rSubsection}
 
-        \begin{rSubsection}{SIRF-SuperBuild}{2023}{Zenodo}{}
+        \item \begin{rSubsection}{SIRF-SuperBuild}{2023}{Zenodo}{}
             \item Pasca~E., Thomas~B.A., da Costa-Luis~C.O., Brown~R., Murgatroyd~L., Biguri~A., Atkinson~D., Ovtchinnikov~E., Gillman~A., Kolbitsch~C., Mayer~J., {\bf Whitehead~A.C.}, Schramm~G. and Thielemans~K.
         \end{rSubsection}
         
-        \begin{rSubsection}{SIRF Virtual Machine}{2023}{Zenodo}{}
+        \item \begin{rSubsection}{SIRF Virtual Machine}{2023}{Zenodo}{}
             \item Ovtchinnikov~E., Brown~R., Thielemans~K., Pasca~E., da Costa-Luis~C.O., Thomas~B.A., Atkinson~D., Mayer~J., Gillman~A., Kolbitsch~C., Ehrhardt~M. and {\bf Whitehead~A.C.}
         \end{rSubsection}
     \end{rSection}
