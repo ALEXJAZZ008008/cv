@@ -1,6 +1,6 @@
 \ProvidesClass{cv}[2010/07/10 v0.9 CV class]
 
-\LoadClass[11pt, letterpaper]{article}
+\LoadClass[12pt, letterpaper]{article}
 
 \usepackage[parfill]{parskip}
 \usepackage{array} 
