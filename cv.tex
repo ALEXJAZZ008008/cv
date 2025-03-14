@@ -1,8 +1,6 @@
 \documentclass{cv}
 \usepackage[left=1cm,top=1cm,right=1cm,bottom=1cm]{geometry}
 
-\linespread{1.0}
-
 \name{Alexander~C.~Whitehead}
 
 \address{(+44)7557~985~843 $\oplus$ alexandercwhitehead@gmail.com}
@@ -11,73 +9,125 @@
 \begin{document}
     \begin{rSection}{Experience}
         \item \begin{rSubsection}{London South Bank University}{2025 - Present}{Visiting Fellow}{}
-            \item I am currently working at London South Bank University from the winter of 2025 as a visiting fellow. Here I am the lead of a project to develop a neural network based method to extract a metabolite corrected arterial input signal from dynamic PET. I'm also involved in the selection and mentoring of PhD students.
+            \item \begin{itemize}
+                \item Leading a project to develop a neural network-based approach for extracting metabolite-corrected arterial input functions from dynamic PET data.
+                \item Contributing to the selection and mentoring of PhD students.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University College London}{2022 - 2024}{Research Fellow}{}
-            \item I worked at University College London from the winter of 2022 until the winter of 2024 as a research fellow. Here I was involved in multiple projects linked to OSIC (Open Source Imaging Consortium). One project was to develop a method (using neural networks) to predict how long a patient, suffering from IPF, might survive using a recent CT. I also developed an extension to this method which extracted maps of the patients lungs that highlighted regions causing the survival chance to decrease (similar to Grad-CAM but superior for our application). Furthermore, I was involved in a project to generate CTs of patients at later time points (using methods like diffusion) where their disease may have progressed. This final project was useful for disease management and planning.
+            \item \begin{itemize}
+                \item Led multiple projects in collaboration with the Open Source Imaging Consortium (OSIC).
+                \item Developed a neural network-based method to predict survival duration for patients with idiopathic pulmonary fibrosis (IPF) using recent CT scans.
+                \item Designed an advanced explain-ability technique, surpassing Grad-CAM, to generate lung maps highlighting regions contributing to decreased survival likelihood.
+                \item Contributed to a project using diffusion-based methods to synthesize future CT scans, aiding disease progression forecasting and clinical planning.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University College London}{2018 - 2024}{Senior Postgraduate Teaching Assistant}{}
-            \item I worked at University College London from the autumn of 2018 until the winter of 2024 as a senior postgraduate teaching assistant. Here I was involved in the teaching and examination of and other assistance with the running of multiple modules across many academic years. One aspect of this role was my lecturing of over 200 students in the fundamentals of programming. I also taught smaller workshops on mathematics as well as aided in electrical engineering labs.
+            \item \begin{itemize}
+                \item Delivered lectures on programming fundamentals to over 200 students.
+                \item Led small-group workshops on mathematics and provided hands-on support in electrical engineering labs.
+                \item Assisted in the teaching, examination, and administration of multiple modules across several academic years.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University of Hull}{2017 - 2018}{Demonstrator}{}
-            \item I worked at the University of Hull from the summer of 2017 until the summer of 2018 as a Demonstrator. This role involved aiding with the teaching of certain modules within the university. For instance, this role included leading embedded programming labs.
+            \item \begin{itemize}
+                \item Assisted in the teaching of multiple modules, providing support in lectures and practical sessions.
+                \item Led embedded programming labs, guiding students through hands-on applications and problem-solving.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University of Hull (Digital Centre)}{2017}{Research Intern}{}
-            \item I worked at the University of Hull (Digital Centre) on a temporary basis during the summer of 2017 as a Research Intern. This role involved researching virtual reality through room scanning devices, autonomous vehicles, 3D printing, and the internet of things. For instance, this role included the development of a drone mounted scanning device as well as a miniature autonomous vehicle intended for racing.
+            \item \begin{itemize}
+                \item Conducted research on virtual reality, room scanning technologies, autonomous vehicles, 3D printing, and the Internet of Things.
+                \item Developed a drone-mounted scanning device for 3D environment reconstruction.
+                \item Designed and built a miniature autonomous vehicle for high-speed racing applications.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{DREAMTHINKSPEAK}{2017}{VR Assistant}{}
-            \item I worked at DREAMTHINKSPEAK on a temporary basis during the summer of 2017 as a VR Assistant. This role involved the development and deployment of a virtual reality art exhibit based on Korean apartments for the city of culture celebration.
+            \item \begin{itemize}
+                \item Developed and deployed a virtual reality art exhibit simulating Korean apartments for the UK City of Culture celebrations.
+                \item Assisted in the technical implementation and optimisation of the VR experience to ensure an immersive and interactive installation.
+            \end{itemize}
         \end{rSubsection}
     \end{rSection}
-
-    \newpage
     
     \begin{rSection}{Education}
         \item \begin{rSubsection}{University College London}{2018 - Present}{PhD Medical Imaging Physics and Medical Image Computing}{}            
-            \item Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation
+            \item \textbf{Modules:} Inverse Problems in Imaging, Information Processing for Medical Imaging, Medical Imaging with Ionising Radiation.
             
-            \item Project: Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT. This project was multifaceted, initially it began with the development of a respiratory motion correction method for PET/CT. This method was invariant of the position (and hence of the introduced bias) of a misaligned attenuation map. This was achieved through the use of an iterative method, which aligned PET data and moved its reference position to that of the attenuation map. To aid in this, motion models were incorporated, which can be considered as a temporal/gate regulariser. However, the project evolved to include methods to extract respiratory signals from dynamic PET data (for the use of gating and motion model estimation) as well as denoising and reconstruction techniques which use neural networks.
+            \item \textbf{Research Project:} \textit{Improved Quantification for Respiratory Gated PET/CT: Data-Driven Algorithms for Respiratory Motion Correction in PET/CT}
+            
+            \item \begin{itemize}
+                \item Developed a respiratory motion correction method for PET/CT, designed to be invariant to the position and bias introduced by misaligned attenuation maps.
+                \item Implemented an iterative approach aligning PET data to the attenuation map’s reference position, incorporating motion models as temporal/gate regularisers.
+                \item Expanded the project to include methods for extracting respiratory signals from dynamic PET data for gating and motion model estimation.
+                \item Investigated denoising and reconstruction techniques using neural networks to enhance PET/CT image quality and quantification.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University of Hull}{2017 - 2018}{MSc Advanced Computer Science}{Distinction}
-            \item C++ Programming and Design, Image Analysis, Real-Time Graphics, Simulation and Artificial Intelligence, and Visualisation.
+            \item \textbf{Modules:} C++ Programming and Design, Image Analysis, Real-Time Graphics, Simulation and Artificial Intelligence, and Visualisation.
             
-            \item Project: Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT. The goal of this project was the development of a library that could provide motion correction for PET using depth sensing cameras. Deformations were determined by registering depth images (point clouds) before spatially and temporally aligning them with the PET acquisition. These deformations could then be used to correct any motion present.
+            \item \textbf{Research Project:} \textit{Motion Signal Extraction Framework for the Microsoft Kinect Camera: Point Cloud Registration and its Application as a Motion Correction Metric in PET/CT}
+            
+            \item \begin{itemize}
+                \item Developed a software library for motion correction in PET imaging using depth-sensing cameras.
+                \item Implemented point cloud registration techniques to track deformations and align them spatially and temporally with PET acquisitions.
+                \item Applied these deformations to correct motion artefacts in PET scans, enhancing image accuracy and quantification.
+            \end{itemize}
         \end{rSubsection}
         
         \item \begin{rSubsection}{University of Hull}{2014 - 2017}{BSc Computer Science}{First Class Honours}
-            \item Computer Systems, Professional Skills for Computer Science, Programming, Quantitative Methods for Computer Science, and Software Engineering and Human Computer Interaction
+            \item \textbf{First-year Modules:} Computer Systems, Professional Skills for Computer Science, Programming, Quantitative Methods for Computer Science, and Software Engineering and Human Computer Interaction.
+
+            \item \textbf{Second-year Modules:} 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics, and Systems Analysis, Design and Process.
+
+            \item \textbf{Third-year Modules:} Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications, and Virtual Environments.
             
-            \item 2D Computer Graphics and User Interface Design, Advanced Programming, Electronics and Interfacing, Networking and Games Architecture, Simulation and 3D Graphics, and Systems Analysis, Design and Process.
+            \item \textbf{Third-year Project:} \textit{Capture the Campus!} – A GPS-based, networked multiplayer mobile game inspired by Qix.
             
-            \item Distributed Systems Programming, Languages and their Compilers, Mobile Devices and Applications, and Virtual Environments.
-            
-            \item Project: Capture the Campus!, this is a GPS based, networked multiplayer, mobile game. The game is similar to the 80's arcade game Qix. However, here the player is moved by physically running across a map in real life, tracked by the mobile device and GPS. A local multiplayer session can be instantiated on one phone and joined by others running the application.
+            \item \begin{itemize}
+                \item Developed a real-world interactive gameplay experience where players physically move across a map, tracked via GPS.
+                \item Implemented real-time networking to enable local multiplayer sessions, allowing players to compete in a dynamic digital environment.
+                \item Designed and developed the game for mobile platforms, incorporating real-world movement as a core gameplay mechanic.
+            \end{itemize}
         \end{rSubsection}
     \end{rSection}
 
     \begin{rSection}{Technical Strengths}
-        \item Medical Physics, Medical Imaging, Image Registration, Image Analysis, PET/CT, Signal Processing
-        \item Data Science, Machine Learning, Deep Learning, Artificial Intelligence, Data Visualisation, Analytical Skills
-        \item Computer Graphics, Computer Vision, Virtual Realty
-        \item C++, C, C\#, Python, Matlab, Java, JavaScript, Pascal, LaTeX, Shell Scripting
-        \item GNU/Linux, Git, SVN, Tensorflow, PyTorch, scikit-learn, Numpy, OpenGL, DirectX, Android, Arduino, Raspberry Pi, .NET Framework, Unity, Qt, BNF, EBNF, Flex, SolidWorks, 3D Printing, Electronics, Soldering 
+        \item \begin{itemize}
+            \item \textbf{Medical Imaging and Physics:} PET/CT, Image Registration, Image Analysis, Signal Processing, Medical Imaging with Ionising Radiation.
+            \item \textbf{Data Science and AI:} Machine Learning, Deep Learning, Artificial Intelligence, Data Visualisation, Analytical Skills.
+            \item \textbf{Computer Graphics and Vision:} Computer Vision, Virtual Reality, 2D and 3D Graphics, Image Processing.
+            \item \textbf{Programming Languages:} C++, C, C\#, Python, MATLAB, Java, JavaScript, Pascal, LaTeX, Shell Scripting.
+            \item \textbf{Software and Tools:} GNU/Linux, Git, SVN, TensorFlow, PyTorch, scikit-learn, NumPy, OpenGL, DirectX, Android, Unity, Qt, .NET Framework, BNF, EBNF, Flex.
+            \item \textbf{Hardware and Engineering:} Arduino, Raspberry Pi, 3D Printing, SolidWorks, Electronics, Soldering.
+        \end{itemize}
     \end{rSection}
     
     \begin{rSection}{Languages}
-        \item English (native)
-        \item German (A1)
-        \\
+        \item \begin{itemize}
+            \item \textbf{English:} Native
+            \item \textbf{German:} A1
+        \end{itemize} 
     \end{rSection}
 
     \begin{rSection}{References}
-        \item Available upon request.
-        \\
+        \item \begin{rSubsection}{Ludovica Brusaferri}{Long-term Collaborator}{Senior Lecturer at London South Bank University}{}
+            \item \textbf{Email:} ludovica.brusaferri@lsbu.ac.uk
+        \end{rSubsection}
+        
+        \item \begin{rSubsection}{Kris Thielemans}{PhD Supervisor}{Professor at University College London}{}
+            \item \textbf{Email:} k.thielemans@ucl.ac.uk
+        \end{rSubsection}
+
+        \item \begin{rSubsection}{Jamie McClelland}{PhD Supervisor}{Associate Professor at University College London}{}
+            \item \textbf{Email:} j.mcclelland@ucl.ac.uk
+        \end{rSubsection}
     \end{rSection}
     
     \begin{rSection}{}
@@ -93,17 +143,17 @@
     \newpage
 
     \begin{rSection}{Personal Statement}
-        \item I have most recently worked as a research fellow at University College London. My post doctoral position was in a different lab from my PhD and as such concentrated far more on principled machine learning (neural network) research. I was funded by OSIC and as such had access to their large database of IPF CT scans (and their relevant clinical data). As a group our objective was to determine novel biomarkers from this data, I specifically worked on survival analysis methods. We developed CenTime which is a novel censoring technique and improvement over both Cox (a very traditional survival analysis method) and DeepHit. I extended CenTime to produce maps of what in the CT is causing the greatest affect on the mortality of the patient. I also developed generative methods which could produce CTs of patients where their mortality is higher or lower. During my time in this position I was expected to present my work regularly at OSIC general meetings for experts in the medical imaging field.
-        
-        \item My PhD focuses, in particular, on respiratory motion correction (with the incorporation of motion models) for PET/CT. During my time as a PhD student I have also had an interest in surrogate signal extraction (specifically for dynamic PET) which led to an exploration of machine learning/neural networks in general. I've applied machine learning to the fields of denoising, reconstruction and more recently arterial input function estimation. My PhD office was in the university hospital and involved a great deal of collaboration with the clinical staff. I presented multiple times at conferences both as a poster presentation but also as an oral presentation. I was quite enthusiastic to submit to conferences and as such I often presented two or three pieces of work at each conference.
-        
-        \item While studying for my PhD I undertook roles at the university teaching electronics, programming and communication. I specifically led lectures for groups of approximately 200 students, teaching the fundamentals of programming. Additionally, I have been the primary supervisor of one MSc dissertation and secondary supervisor of a further three. My primary supervision was on a project to apply machine learning to the extraction of respiratory signals from dynamic PET. My secondary supervision were on projects to denoise total body PET data using neural networks and 3D printed phantoms.
-        
-        \item Previously, I had studied at the University of Hull for an MSc and BSc in computer science. Here I had a particular interest in computer vision, compiler design and embedded programming. Larger projects I undertook included: A motion correction method for PET, which used a Microsoft Kinect camera to track and correct the motion of the patient in a medical scanner. As well as an online, multiplayer, mobile based game which saw players physically running around cities attempting to cut each other's path off, a la Tron.
-        
-        \item While studying for my MSc and BSc I undertook roles at the university which saw me performing research to produce a cave scanning device and an autonomous remote controlled race car. The cave scanning device consisted of a 3D printed custom mounted LiDAR atop a drone, which could fly into a cave and the LiDAR would scan. Furthermore I also taught classes on embedded and distributed programming.
-        
-        \item Other than for academic education and experience, I've also enjoyed positions in the past as a bouncer in the University of Hull's nightclub and as a helpful face moving first year students into their accommodation (helping them around the university in general). I was the social secretary of the University of Hull Computer Science Society and also an honorary member of the University of York's Real Ale Society (where I set many unbeaten records). Before Covid, I also ran a cake club in the office where I was working on my PhD. Time permitting, I enjoy partaking in music (both attending and performing, I play the saxophone and the bass guitar - previously, I was involved in an outreach program teaching music in primary schools), analogue/digital photography (and film development), 3D printing, beer brewing (I worked at York Brewery for a short time), and fish keeping.
+        \item I am a researcher with expertise in medical imaging, machine learning, and computational modelling, particularly in the application of neural networks for medical data analysis. My most recent role was as a Research Fellow at University College London (UCL), where I worked in a different lab from my PhD, focusing on principled machine learning research. I was funded by OSIC (Open Source Imaging Consortium), giving me access to a vast database of IPF (Idiopathic Pulmonary Fibrosis) CT scans and clinical data. My primary contributions included developing CenTime, a novel censoring technique that improves upon traditional survival analysis methods like Cox and DeepHit. I extended CenTime to generate mortality maps, highlighting the lung regions most associated with patient survival. Additionally, I contributed to generative models that predict future disease progression in CT scans. Throughout this role, I regularly presented my work at OSIC general meetings attended by leading experts in the field.
+
+        \item My PhD at UCL focused on respiratory motion correction for PET/CT, integrating motion models to improve quantification accuracy. This research expanded into areas such as surrogate signal extraction for dynamic PET, image denoising, and neural network-based reconstruction techniques. My PhD involved close collaboration with clinical staff at the university hospital, and I actively engaged with the wider research community by frequently presenting at conferences, often with multiple contributions per event.
+
+        \item Alongside my research, I was heavily involved in teaching and supervision. As a Senior Postgraduate Teaching Assistant, I delivered lectures to over 200 students on programming fundamentals, led smaller mathematics workshops, and assisted in electrical engineering labs. I also supervised one MSc dissertation on machine learning for respiratory signal extraction in PET and co-supervised three additional MSc projects focused on denoising total-body PET data and 3D-printed phantoms.
+
+        \item Prior to my PhD, I earned an MSc and BSc in Computer Science from the University of Hull, where I developed a strong foundation in computer vision, compiler design, and embedded programming. My MSc research involved using a Microsoft Kinect camera for motion correction in PET imaging, while my BSc project was a GPS-based, networked multiplayer mobile game inspired by Qix and Tron, where players physically moved through real-world environments.
+
+        \item During my time at Hull, I also worked on autonomous vehicle research and cave scanning technology, contributing to a project that developed a drone-mounted LiDAR system for 3D environment mapping. Additionally, I taught embedded and distributed programming as a demonstrator.
+
+        \item Beyond my academic career, I have pursued a variety of interests. I was a bouncer at the University of Hull’s nightclub, assisted first-year students with accommodation, and served as Social Secretary of the Computer Science Society. I also hold the unbeaten record for certain Real Ale Society challenges at the University of York. Before the pandemic, I organised a cake club in my PhD office. In my spare time, I enjoy playing saxophone and bass guitar, analogue/digital photography and film development, 3D printing, beer brewing (including a short stint at York Brewery), and fish-keeping.
     \end{rSection}
 
     \newpage
