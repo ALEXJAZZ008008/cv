@@ -15,14 +15,25 @@
 
 \let \@addressone \relax
 \let \@addresstwo \relax
+\let \@addressthree \relax
 
-\def \address #1
-{
-    \@ifundefined{@addresstwo}
-    {
-        \def \@addresstwo {#1}
-    }
-    
+\def \addressone #1
+{    
+    \def \@addressone {#1}
+}
+
+\def \addresstwo #1
+{    
+    \def \@addresstwo {#1}
+}
+
+\def \addressthree #1
+{    
+    \def \@addressthree {#1}
+}
+
+\def \addressone #1
+{    
     \def \@addressone {#1}
 }
 
@@ -108,5 +119,5 @@
 \def\namesize{\huge}
 \def\addressskip{\smallskip}
 \def\sectionlineskip{\medskip}
-\def\nameskip{\bigskip}
+\def\nameskip{\medskip}
 \def\sectionskip{\medskip}
