@@ -1,10 +1,11 @@
-\ProvidesClass{cv}[2010/07/10 v0.9 CV class]
+\ProvidesClass{cv}
 
-\LoadClass[12pt, letterpaper]{article}
+\LoadClass[a4paper, oneside, 12pt]{article}
 
-\usepackage[parfill]{parskip}
-\usepackage{array} 
+\usepackage{etoolbox}
 \usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage{float}
 
 \pagestyle{empty}
 
@@ -13,71 +14,36 @@
 
 \def \addressSep {$\diamond$}
 
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
-
-\def \addressone #1
-{    
-    \def \@addressone {#1}
-}
-
-\def \addresstwo #1
-{    
-    \def \@addresstwo {#1}
-}
-
-\def \addressthree #1
-{    
-    \def \@addressthree {#1}
-}
-
-\def \addressone #1
-{    
-    \def \@addressone {#1}
-}
-
-\def \printaddress #1
-{
-    \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-    \endgroup
-    \par
-    \addressskip
-}
-
-\def \printname
-{
-    \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip
-    \break
-    \endgroup
+\newcommand{\@addresses}{}
+\newcommand{\address}[1]{%
+    \gappto{\@addresses}{#1\\}%
 }
 
 \let\ori@document=\document
 
-\renewcommand{\document}
-{
-    \ori@document
-  
-    \printname
-  
-    \@ifundefined{@addressone}{}
-    {
-        \printaddress{\@addressone}
-    }
-  
-    \@ifundefined{@addresstwo}{}
-    {
-        \printaddress{\@addresstwo}
-    }
-    
-    \@ifundefined{@addressthree}{}
-    {
-        \printaddress{\@addressthree}
-    }
+\AtBeginDocument{
+    \noindent
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedleft
+        \ifx\@photo\empty\else
+            \begin{figure}[H]
+                \vspace{-1.5cm}
+                \includegraphics[width=\@photowidth]{\@photo}
+            \end{figure}
+        \fi
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.75\textwidth}
+        \vspace{-0.5cm}
+        {\MakeUppercase{\LARGE\bfseries \@name}}\par\nameskip
+        \vspace{1.0cm}
+        \begingroup
+            \def\\{\addressSep\ }
+            \raggedright
+            \@addresses
+        \endgroup
+    \end{minipage}
+    \par
 }
 
 \newenvironment{rSection}[1]

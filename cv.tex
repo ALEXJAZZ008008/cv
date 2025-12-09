@@ -1,8 +1,9 @@
 \documentclass{cv}
 
+\usepackage{fontspec}
 \usepackage[left=1.5cm,top=1.5cm,right=1.5cm,bottom=1.5cm]{geometry}
 
-\usepackage[activate={true, nocompatibility}, final, tracking=true, kerning=true, spacing=false, factor=1100, stretch=10, shrink=10]{microtype}
+\usepackage[activate={true, nocompatibility}, final, tracking=true, kerning=false, spacing=false, factor=1050, stretch=10, shrink=10]{microtype}
 \microtypecontext{spacing=nonfrench}
 
 \tolerance=1414
@@ -12,20 +13,24 @@
 
 \usepackage{setspace}
 
-\usepackage{graphicx}
-\usepackage{float}
-
 \usepackage{tabularx}
 
 \usepackage[inline]{enumitem}
 
-\linespread{1.1}
+\setmainfont[
+    Path=./,
+    UprightFont = {*-Regular},
+    BoldFont    = {*-Bold},
+    ItalicFont  = {*-Italic},
+    BoldItalicFont = {*-BoldItalic}
+]{DINish.otf}
 
 \name{Alexander~C.~Whitehead, P\MakeLowercase{h}.D}
 
-\addressone{Fuhlsbuettler Str.~599, 22337 Hamburg, Germany}
-\addresstwo{+49~15563~707429 $\oplus$ alexandercwhitehead@gmail.com}
-\addressthree{DOB: 26.10.1995 $\land$ Nationality: British}
+\address{Fuhlsbuettler Str.~599, 22337 Hamburg, Germany}
+\address{+49~15563~707429 $\oplus$ alexandercwhitehead@gmail.com}
+\address{DOB: 26.10.1995 $\land$ Nationality: British}
+\address{Arbeitsberechtigung für Deutschland}
 
 \makeatletter
 
@@ -33,41 +38,13 @@
 \def\@photowidth{0pt}
 \newcommand{\photo}[2]{\def\@photo{#1}\def\@photowidth{#2}}
 
-\renewcommand{\printaddress}[1]{}
-
-\renewcommand{\printname}{
-    \noindent
-    \begin{minipage}[t]{0.25\textwidth}
-        \raggedleft
-            \ifx\@photo\empty\else
-                \begin{figure} [H]
-                    \vspace{-1.5cm}
-                    \includegraphics[width=\@photowidth]{\@photo}
-                \end{figure}
-            \fi
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.75\textwidth}
-        \vspace{-0.5cm}
-        {\MakeUppercase{\LARGE\bfseries \@name}}\par\nameskip
-        \vspace{1.0cm}
-        \begingroup
-            \def\\{\addressSep\ }
-            \raggedright
-            \@addressone\par\addressskip
-            \@addresstwo\par\addressskip
-            \@addressthree\par
-        \endgroup
-    \end{minipage}
-    \par
-}
-
 \makeatother
 
 \photo{cv_photo.jpg}{3.5cm}
 
 \begin{document}    
-    \begin{spacing}{1.1}
+    \begin{spacing}{1.2}
+        \vspace{0.5cm}
         \begin{rSection}{Technical Strengths}
             \begin{itemize}
                 \item \textbf{Software \& Tools:} Python, C/C++, CMake, CUDA, MATLAB, Bash (shell scripting), LaTeX, Linux (advanced), Git; also C\#, Java, JavaScript
@@ -144,17 +121,17 @@
         \begin{rSection}{Languages}
             \item \begin{itemize*}[itemjoin={\hspace{1cm}|\hspace{1cm}}]
                 \item \textbf{English:} Native
-                \item \textbf{German:} A1, in progress
+                \item \textbf{German:} A1.1, A1.2 in progress
             \end{itemize*} 
         \end{rSection}
     
         \begin{rSection}{References}
-            \item \noindent \begin{minipage}[t]{0.37\textwidth}
+            \item \noindent \begin{minipage}[t]{0.36\textwidth}
                 \begin{rSubsection}{Kris Thielemans}{PhD Supervisor}{Professor, University College London}{}
                     \item \textbf{Email:} k.thielemans@ucl.ac.uk
                 \end{rSubsection}
             \end{minipage}
-            \begin{minipage}[t]{0.46\textwidth}
+            \begin{minipage}[t]{0.45\textwidth}
                 \begin{rSubsection}{Jamie McClelland}{PhD Supervisor}{Associate Professor, University College London}{}
                     \item \textbf{Email:} j.mcclelland@ucl.ac.uk
                 \end{rSubsection}
@@ -165,17 +142,17 @@
 
     \newpage
 
-    \begin{spacing}{1.4}
+    \begin{spacing}{1.7}
         \begin{rSection}{Cover Letter and Personal Statement}
             \item To whom it may concern,
 
-            \item I am a research scientist with expertise in machine learning, medical imaging, and data-driven algorithm development, seeking a role in Hamburg or remote where I can apply advanced analytical methods to impactful problems. I am permanently based in Hamburg, where I live with my German partner. I currently hold a Chancenkarte residence permit, which allows me to reside and work in Germany while seeking qualified employment, with a straightforward path to transition into a full employment permit once a suitable role is secured. This ensures there are no relocation barriers and highlights my long-term commitment to remaining in Hamburg.
+            \item I am a research scientist with expertise in machine learning, medical imaging, and data-driven algorithm development, seeking a role in Hamburg or remote where I can apply advanced analytical methods to impactful problems. I am permanently based in Hamburg, where I live with my German partner, and am \textbf{fully authorised to work in Germany without restriction}. This reflects both my immediate availability and long-term commitment to remaining in Hamburg.
 
-            \item My work spans from fundamental research in PET/CT imaging and respiratory motion correction to the design of machine learning pipelines that have attracted interest from Siemens Healthineers and GE Healthcare for potential clinical deployment.
+            \item My work spans from fundamental research in PET/CT imaging and respiratory motion correction to the design of machine learning pipelines that have attracted interest from \textbf{Siemens Healthineers and GE Healthcare} for potential clinical deployment.
 
-            \item My research has produced high-profile publications, including an Editor’s Choice article in Physics in Medicine \& Biology, and work currently under review at Nature. I have presented internationally, collaborated across disciplines, and contributed to open-source tools that support reproducibility and adoption within both academic and industrial settings.
+            \item My research has produced high-profile publications, including an \textbf{Editor’s Choice article} in \textit{Physics in Medicine \& Biology}, and work currently under review at \textit{Nature}. I have presented internationally, collaborated across disciplines, and contributed to open-source tools that support reproducibility and adoption within both academic and industrial settings.
 
-            \item Technically, I bring experience with neural networks (CNNs, autoencoders, transformers, diffusion models), explainable AI, survival analysis, and large-scale data processing. Beyond technical expertise, I am committed to mentoring and knowledge transfer, having supervised MSc projects and taught across multiple programming and medical physics courses.
+            \item Technically, I bring experience with \textbf{neural networks (CNNs, autoencoders, transformers, diffusion models), explainable AI, survival analysis, and large-scale data processing}. Beyond technical expertise, I am committed to mentoring and knowledge transfer, having supervised MSc projects and taught across multiple programming and medical physics courses.
 
             \item I am motivated by projects that connect rigorous research with real-world application, where innovation is measured not only by novelty but also by usability and societal impact. I value collaborative, interdisciplinary environments and bring a problem-solving approach that balances creativity with scientific discipline.
             
@@ -186,7 +163,7 @@
                     \item \begin{figure} [H]
                               \vspace{-0.2cm}
                               \hspace{1.0cm}\includegraphics[width=0.3\linewidth]{signature.png}
-                              \vspace{-1.3cm}
+                              \vspace{-1.1cm}
                           \end{figure}
                     
                     \item Alexander C. Whitehead
@@ -197,103 +174,190 @@
 
     \newpage
 
-    \begin{spacing}{1.0}
-        \begin{rSection}{Publications}
+    \begin{rSection}{Publications}
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Non-invasive full quantification of dynamic [$^{11}$C]PBR28 PET imaging with ASTRA}{}{Nature}{2025 (in review)}
+                \vspace{-0.25cm}
                 \item  Brusaferri~L.~\textbf{\textsuperscript{\S}}, \textbf{Whitehead~A.C.~\textsuperscript{\S}}, Barzon~L., Maccioni~L., Alshelh~Z., Toschi~N., Ferrante~M., Inglese~M., Catana~C., Gilman~J., Thielemans~K., Veronese~M., Turkheimer~F.E., Grisan~E., Loggia~M.L. \\
                 \vspace{-0.5cm}
                 \item \textbf{\textsuperscript{\S}These authors contributed equally} \\
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Mortality Maps: Inherently Interpretable Event-Conditional Survival Analysis}{}{arXiv}{2025 (in preparation)}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.} and Brusaferri~L. \\
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Advancing Generalisable Neural Network-Based PET Quantification: A Multicenter [11C]PBR28 study}{}{IEEE EMBC}{2025}
+                \vspace{-0.25cm}
                 \item Brusaferri~L.~\textbf{\textsuperscript{\S}}, \textbf{Whitehead~A.C.~\textsuperscript{\S}}, Maccioni~L., Alshelh~Z., Veronese~M., Turkheimer~F., Toschi~N., Ferrante~M., Inglese~M., Catana~C., Grisan~E., and Loggia~M.L. \\
                 \vspace{-0.5cm}
                 \item \textbf{\textsuperscript{\S}These authors contributed equally} \\
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA: An Ensemble Method}{}{Physics in Medicine and Biology}{2024}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Su~K.-H., Emond~E.C., Biguri~A., Machado~M., Porter~J.C., Garthwaite~H., Wollenweber~S.D., McClelland~J.R., and Thielemans~K. \\
                 \vspace{-0.5cm}
                 \item \textbf{Selected as Editor’s Choice article of the month!} \\
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{CenTime: Event-conditional modelling of censoring in survival analysis}{}{Medical Image Analysis}{2024}
+                \vspace{-0.25cm}
                 \item Shahin~A.H, Zhao~A., \textbf{Whitehead~A.C.}, Alexander~D.C., Jacob~J., and Barber D.
             \end{rSubsection}
-    
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Physically informed deep neural networks for metabolite-corrected plasma input function estimation in dynamic PET imaging}{}{Computer Methods and Programs in Biomedicine}{2024}
+                \vspace{-0.25cm}
                 \item Ferrante~M., Inglese~M., Brusaferri~L., \textbf{Whitehead~A.C.}, Maccioni~L., Turkheimer~F.E., Nettis~M.A., Mondelli~V., Howes~O., Loggia~M.L., Veronese~M., and Toschi~N.
             \end{rSubsection}
-    
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{A Bayesian Neural Network-Based Method For The Extraction Of A Metabolite Corrected Arterial Input Function From Dynamic [$^{11}$C]PBR28 PET}{}{IEEE NSS MIC RTSD}{2023}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Brusaferri~L., Maccioni~L., Ferrante~M., Inglese~M., Alshelh~Z., Veronese~M., Toschi~N., Gilman~J., Thielemans~K., and Loggia~M.L.
             \end{rSubsection}
-    
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Neural Network Based Methods for the Survival Analysis of Idiopathic Pulmonary Fibrosis Patients from a Baseline CT Acquisition}{}{IEEE NSS MIC RTSD}{2023}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Shahin~A.H., Zhao~A., Alexander~D.C., Jacob~J., and Barber~D.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{PET/CT Motion Correction Exploiting Motion Models Fit on Coarsely Gated Data Applied to Finely Gated Data}{}{IEEE NSS MIC RTSD}{2022}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Su~K.-H., Wollenweber~S.D., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Data Driven Surrogate Signal Extraction for Dynamic PET Using Selective PCA}{}{IEEE NSS MIC RTSD}{2022}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Su~K.-H., Emond~E.C., Biguri~A., Machado~M., Porter~J.C., Garthwaite~H., Wollenweber~S.D., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Pseudo-Bayesian DIP Denoising as a Preprocessing Step for Kinetic Modelling in Dynamic \newline PET}{}{IEEE NSS MIC RTSD}{2022}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Erlandsson~K., Biguri~A., Wollenweber~S.D., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Physically Informed Neural Network for Non-Invasive Arterial Input Function Estimation In Dynamic PET Imaging}{}{MIDL}{2022}
+                \vspace{-0.25cm}
                 \item Ferrante~M., Inglese~M., Brusaferri~L., \textbf{Whitehead~A.C.}, Loggia~M., and Toschi~N.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Detection Efficiency Modelling and Joint Activity and Attenuation Reconstruction in non-TOF 3D PET from Multiple-Energy Window Data}{}{IEEE Transactions on Radiation and Plasma Medical Sciences}{2021}
+                \vspace{-0.25cm}
                 \item Brusaferri~L., Emond~E.C., Bousse~A., Twyman~R., \textbf{Whitehead~A.C.}, Atkinson~D., Ourselin~S., Hutton~B.F., Arridge~S., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Comparison of Motion Correction Methods Incorporating Motion Modelling for PET/CT Using a Single Breath Hold Attenuation Map}{}{IEEE NSS MIC RTSD}{2021}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Biguri~A., Su~K.-H., Wollenweber~S.D., Stearns~C.W., Hutton~B.F., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Systematic evaluation of the impact of involuntary motion in whole body dynamic PET}{}{IEEE NSS MIC RTSD}{2021}
+                \vspace{-0.25cm}
                 \item Biguri~A., Kotasidis~F., \textbf{Whitehead~A.C.}, Burger~I., Hutton~B.F., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Respiratory Motion Correction With a Single Attenuation Map Using NAC Derived Deformation Fields}{}{IEEE NSS MIC RTSD}{2020}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Biguri~A., Efthimiou~N., Su~K.-H., Wollenweber~S.D., Stearns~C.W., Hutton~B.F., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Impact of Time-of-Flight on Respiratory Motion Modelling using Non-Attenuation-Corrected \newline PET}{}{IEEE NSS MIC RTSD}{2019}
+                \vspace{-0.25cm}
                 \item \textbf{Whitehead~A.C.}, Emond~E.C., Efthimiou~N., Akintonde~A., Wollenweber~S., Stearns~C.W., Hutton~B.F., McClelland~J.R., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{Preliminary investigation of the impact of Axial Ring Splitting on Image Quality for the Cost Reduction of Total-Body PET}{}{IEEE NSS MIC RTSD}{2019}
+                \vspace{-0.25cm}
                 \item Efthimiou~N., \textbf{Whitehead~A.C.}, Stockhoff~M., Thyssen~C., Archibald~S.J., and Vandenberghe~S.
             \end{rSubsection}
-        \end{rSection}
-        
-        \begin{rSection}{Code}
+        \end{spacing}
+    \end{rSection}
+
+    \vspace{-0.5cm}
+    \begin{rSection}{Code}
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{STIR Software for Tomographic Image Reconstruction}{}{Zenodo}{2024}
+                \vspace{-0.25cm}
                 \item Efthimiou~N., Mustafovic~S., Brown~R., Twyman Skelly~R., Deidda~D., Tsoumpas~C., Falcon~C., Jehl~M., Strugari~M., Khateri~P., Beisel~T., Wadhwa~P., Borgeaud~T., Emond~E., Jacobson~M., Gillman~A., Zverovich~A., Fuster Marti~B., Labbe~C., Biguri~A., Fischer~J., Roethlisberger~M., Bertolli~O., Brusaferri~L., Pasca~E., Thomas~B.A, Aguiar~P., Niknejad~T., Sadki~M., Schmidtlein~C.R., Kerrouche~N., Dikaios~N., Fardell~G., Ehrhardt~M., Valente~P., Ovtchinnikov~E., Schramm~G., Völgyes~D., Dinelle~K., Belluzzo~D., Jurjew~N., Ching~D., Hague~D., Tunnicliffe~H., Chen~G., Porter~S.D., Mikhaylova~E., Dao~V.A., da Costa-Luis~C.O., \textbf{Whitehead~A.C.}, Rashidnasab~A., Gillen~R., Vavrek~J., Tsai~Y.-J., Kohr~H., tokkot, El Katib~M., and Thielemans~K.
             \end{rSubsection}
+        \end{spacing}
 
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{SIRF-SuperBuild}{}{Zenodo}{2024}
+                \vspace{-0.25cm}
                 \item Pasca~E., Thomas~B.A., da Costa-Luis~C.O., Brown~R., Murgatroyd~L., Biguri~A., Atkinson~D., Ovtchinnikov~E., Gillman~A., Kolbitsch~C., Mayer~J., \textbf{Whitehead~A.C.}, Schramm~G., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{SIRF Synergistic Image Reconstruction Framework}{}{Zenodo}{2023}
+                \vspace{-0.25cm}
                 \item Ovtchinnikov~E., Brown~R., Mayer~J., Pasca~E., da Costa-Luis~C.O., Atkinson~D., Kolbitsch~C., Efthimiou~N., Strugari~M., Gillman~A., Porter~S.D., Biguri~A., Deidda~D., \textbf{Whitehead~A.C.}, Papoutsellis~E., Fardell~G., Thomas~B.A., Leek~F., Ehrhardt~M., and Thielemans~K.
             \end{rSubsection}
-            
+        \end{spacing}
+
+        \vspace{-0.5cm}
+        \begin{spacing}{1.2}
             \item \begin{rSubsection}{SIRF Virtual Machine}{}{Zenodo}{2023}
+                \vspace{-0.25cm}
                 \item Ovtchinnikov~E., Brown~R., Thielemans~K., Pasca~E., da Costa-Luis~C.O., Thomas~B.A., Atkinson~D., Mayer~J., Gillman~A., Kolbitsch~C., Ehrhardt~M., and \textbf{Whitehead~A.C.}
             \end{rSubsection}
-        \end{rSection}
-    \end{spacing}
+        \end{spacing}
+    \end{rSection}
 \end{document}
